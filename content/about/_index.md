@@ -9,7 +9,7 @@ department: "Department of Metallurgical Engineering"
 
 institution: "Indian Institute of Technology (BHU) Varanasi"
 
-photo: "/images/profile/praveen.jpg"
+photo: "/images/team/praveen.jpg"
 
 email: "praveen.met@iitbhu.ac.in"
 
@@ -18,16 +18,16 @@ office: "Department of Metallurgical Engineering, IIT (BHU) Varanasi"
 profiles:
 
   - title: "Google Scholar"
-    url: ""
+    url: "https://scholar.google.com/citations?user=v745JdMAAAAJ&hl=en"
 
   - title: "ORCID"
-    url: ""
+    url: "https://orcid.org/0000-0001-8803-3509"
 
   - title: "Scopus"
-    url: ""
+    url: "https://www.scopus.com/authid/detail.uri?authorId=57204760648"
 
   - title: "ResearchGate"
-    url: ""
+    url: "https://www.researchgate.net/profile/Praveen-Sathiyamoorthi"
 
 stats:
 

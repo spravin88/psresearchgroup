@@ -109,6 +109,8 @@ h1,h2,h3 {
   justify-content: space-between;
   gap: 40px;
   min-height: 80px;
+  flex-wrap: wrap;
+  padding-block: 12px;
 }
 
 .site-brand {
@@ -145,6 +147,14 @@ h1,h2,h3 {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+/* FIX: 10 menu items no longer fit one row above ~1300px content
+   width; wrapping to a second line avoids the page-wide horizontal
+   scrollbar that appeared instead. */
+.nav-list {
+  flex-wrap: wrap;
+  row-gap: 4px;
 }
 
 .nav-list a {
@@ -2202,6 +2212,14 @@ section.block img[src*="/images/team/"] {
   column-gap: 3rem;
   position: relative;
   margin-bottom: 2.5rem;
+}
+
+/* FIX: template renders a .career-marker element before .career-year;
+   left undeclared, it consumed a grid slot and pushed .career-content
+   onto a phantom row, producing a large empty gap. The timeline dot is
+   already drawn by .career-year::after, so the marker is redundant. */
+.career-marker {
+  display: none;
 }
 
 .career-year {

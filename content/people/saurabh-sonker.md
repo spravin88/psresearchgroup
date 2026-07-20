@@ -1,13 +1,13 @@
 ---
-title: "Sourabh Sonker"
+title: "Saurabh Sonker"
 
-name: "Sourabh Sonker"
+name: "Saurabh Sonker"
 
 role: "PhD Scholar"
 
 type: "member"
 
-image: "/images/team/sourabh-sonker.jpg"
+image: "/images/team/saurabh-sonker.jpg"
 
 research: "Laser cladding of ferrous-complex concentrated alloys"
 

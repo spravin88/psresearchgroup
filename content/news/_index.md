@@ -71,7 +71,7 @@ Complex Alloys* in the workshop on **"Laser Cladding for TSL Applications"**, Ta
 
 - **January 13** — Appointed Editorial Committee Member of **Metals and Materials International (Springer)**.
 
-- **January** — Sourabh Sonker joined the group as a doctoral research scholar.
+- **January** — Saurabh Sonker joined the group as a doctoral research scholar.
 
 ---
 

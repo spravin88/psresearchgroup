@@ -996,85 +996,41 @@ section.block img[src*="/images/team/"] {
    11. About page & stats
    ========================================================== */
 
+/* Consolidated from 3 duplicate revisions above; sized down ~50%
+   per request (was: padding 1.5rem, minmax 160px, value 2rem) */
 .stat-card {
+  background: white;
   border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 18px 24px;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
   text-align: center;
-  min-width: 120px;
-}
-
-.stat-card span {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--primary);
-}
-
-.stat-card small {
-  color: var(--muted);
-}
-
-/* NOTE: '.stat-card' redefined (revision 2) — later declarations win */
-.stat-card {
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 30px;
-  text-align: center;
-  transition: .3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,.06);
+  transition: transform .2s ease, box-shadow .2s ease;
 }
 
 .stat-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0,0,0,.06);
-}
-
-/* NOTE: '.stat-card span' redefined (revision 2) — later declarations win */
-.stat-card span {
-  display: block;
-  font-size: 2.3rem;
-  font-weight: 700;
-  color: var(--primary);
-}
-
-/* NOTE: '.stat-card small' redefined (revision 2) — later declarations win */
-.stat-card small {
-  color: var(--muted);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,.10);
 }
 
 .about-stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1.5rem;
-  margin-top: 3rem;
-}
-
-/* NOTE: '.stat-card' redefined (revision 3) — later declarations win */
-.stat-card {
-  background: white;
-  border-radius: 12px;
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,.08);
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-
-/* NOTE: '.stat-card:hover' redefined (revision 2) — later declarations win */
-.stat-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,.12);
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  max-width: 520px;
 }
 
 .stat-value {
-  font-size: 2rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--primary);
-  margin-bottom: .4rem;
+  margin-bottom: .2rem;
 }
 
 .stat-label {
   color: var(--text-light);
-  font-size: .95rem;
+  font-size: .7rem;
 }
 
 .about-hero {

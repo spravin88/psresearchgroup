@@ -1,0 +1,16 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="{{ "/" | relURL }}" class="site-brand">
+      <span class="brand-name">{{ .Site.Params.author }}</span>
+      <span class="brand-sub">{{ .Site.Params.tagline }}</span>
+    </a>
+    <nav class="site-nav">
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-list').classList.toggle('open')">&#9776;</button>
+      <ul class="nav-list">
+        {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL | relURL }}" {{ if eq $.RelPermalink .URL }}class="active"{{ end }}>{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+</header>

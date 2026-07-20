@@ -1,0 +1,455 @@
+{{ define "main" }}
+
+<!-- ==========================================================
+     HERO
+=========================================================== -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <div class="about-hero">
+
+            {{ with .Params.photo }}
+            <div class="about-photo">
+                <img src="{{ . }}" alt="{{ $.Params.name }}">
+            </div>
+            {{ end }}
+
+            <div class="about-intro">
+
+                <p class="page-kicker">
+                    {{ .Title }}
+                </p>
+
+                <h1>{{ .Params.name }}</h1>
+
+                <p class="designation">
+
+                    {{ .Params.designation }}<br>
+
+                    {{ .Params.department }}<br>
+
+                    {{ .Params.institution }}
+
+                </p>
+
+                {{ with .Params.profiles }}
+
+                <div class="profile-links">
+
+                    {{ range . }}
+
+                        {{ if .url }}
+
+                        <a href="{{ .url }}"
+                           target="_blank"
+                           rel="noopener">
+
+                            {{ .title }}
+
+                        </a>
+
+                        {{ end }}
+
+                    {{ end }}
+
+                </div>
+
+                {{ end }}
+
+            </div>
+
+        </div>
+
+        {{ with .Params.stats }}
+
+        <div class="about-stats">
+
+            {{ range . }}
+
+            <article class="stat-card">
+
+                <span class="stat-value">
+
+                    {{ .value }}
+
+                </span>
+
+                <span class="stat-label">
+
+                    {{ .label }}
+
+                </span>
+
+            </article>
+
+            {{ end }}
+
+        </div>
+
+        {{ end }}
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+     ABOUT
+=========================================================== -->
+
+<section class="block">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2>About Me</h2>
+
+            <p>
+
+                Advancing the science and engineering of
+                compositionally complex alloys through
+                computational design, innovative processing,
+                and microstructure–property relationships.
+
+            </p>
+
+        </div>
+
+        <div class="about-content">
+
+            <div class="about-biography">
+
+                {{ .Content }}
+
+            </div>
+
+            <aside class="quick-facts">
+
+                <h3>
+
+                    Quick Facts
+
+                </h3>
+
+                <dl>
+
+                    {{ range .Params.quick_facts }}
+
+                    <div class="fact-item">
+
+                        <dt>
+
+                            {{ .label }}
+
+                        </dt>
+
+                        <dd>
+
+                            {{ .value }}
+
+                        </dd>
+
+                    </div>
+
+                    {{ end }}
+
+                </dl>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+     RESEARCH INTERESTS
+=========================================================== -->
+
+<section class="block block-alt">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2>Research Interests</h2>
+
+            <p>
+
+                My research integrates computational alloy design,
+                advanced processing routes, and detailed
+                microstructural characterization to develop
+                next-generation structural metallic materials.
+
+            </p>
+
+        </div>
+
+        <div class="research-interest-grid">
+
+            {{ range .Params.research_interests }}
+
+            <article class="research-interest-card">
+
+                <div class="card-accent"></div>
+
+                <h3>
+
+                    {{ .title }}
+
+                </h3>
+
+                <p>
+
+                    {{ .description }}
+
+                </p>
+
+            </article>
+
+            {{ end }}
+
+        </div>
+
+        <div class="section-footer">
+
+            <a href="/research/" class="btn btn-outline">
+
+                Explore Research →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+     ACADEMIC JOURNEY
+=========================================================== -->
+
+<section class="block">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2>Academic Journey</h2>
+
+            <p>
+
+                My academic journey spans research,
+                teaching, and international collaborations
+                in metallurgy and materials science.
+
+            </p>
+
+        </div>
+
+        <div class="career-timeline">
+
+            {{ range .Params.career }}
+
+            <article class="career-item">
+
+                <div class="career-marker">
+
+                    <span></span>
+
+                </div>
+
+                <div class="career-year">
+
+                    {{ .year }}
+
+                </div>
+
+                <div class="career-content">
+
+                    <h3>
+
+                        {{ .title }}
+
+                    </h3>
+
+                    <h4>
+
+                        {{ .organization }}
+
+                    </h4>
+
+                </div>
+
+            </article>
+
+            {{ end }}
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+     PROFESSIONAL SERVICE
+=========================================================== -->
+
+<section class="block block-alt">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2>Professional Service</h2>
+
+            <p>
+
+                Contributing to the global materials science community
+                through editorial responsibilities and peer-review
+                activities.
+
+            </p>
+
+        </div>
+
+        <div class="info-card-grid">
+
+            {{ range .Params.service }}
+
+            <article class="info-card">
+
+                <h3>
+
+                    {{ .category }}
+
+                </h3>
+
+                <ul>
+
+                    {{ range .items }}
+
+                    <li>
+
+                        {{ . }}
+
+                    </li>
+
+                    {{ end }}
+
+                </ul>
+
+            </article>
+
+            {{ end }}
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+     HONORS & AWARDS
+=========================================================== -->
+
+<section class="block">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2>Honors & Awards</h2>
+
+            <p>
+
+                Recognition received for research excellence,
+                scholarly contributions, and scientific presentations.
+
+            </p>
+
+        </div>
+
+        <div class="info-card-grid">
+
+            {{ range .Params.awards }}
+
+            <article class="info-card">
+
+                <h3>
+
+                    {{ .category }}
+
+                </h3>
+
+                <ul>
+
+                    {{ range .items }}
+
+                    <li>
+
+                        {{ . }}
+
+                    </li>
+
+                    {{ end }}
+
+                </ul>
+
+            </article>
+
+            {{ end }}
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+     CURRICULUM VITAE
+=========================================================== -->
+
+<section class="block cv-section">
+
+    <div class="container">
+
+        <div class="cv-card">
+
+            <h2>
+
+                Curriculum Vitae
+
+            </h2>
+
+            <p>
+
+                My curriculum vitae provides a comprehensive overview
+                of my academic career, research contributions,
+                publications, funded projects, teaching activities,
+                professional service, and awards.
+
+            </p>
+
+            {{ with .Params.cv }}
+
+            <a href="{{ . }}"
+               class="btn btn-primary"
+               target="_blank">
+
+                Download CV
+
+            </a>
+
+            {{ end }}
+
+        </div>
+
+    </div>
+
+</section>
+
+{{ end }}

@@ -1,0 +1,164 @@
+{{ define "main" }}
+
+<!-- =====================================
+     Hero
+===================================== -->
+
+<section class="hero hero-page">
+
+    <div class="hero-content">
+
+        <div class="section-label">
+            FACILITIES
+        </div>
+
+        <h1>
+            Research Facilities
+        </h1>
+
+        <p>
+            Our laboratory combines computational tools and experimental equipment
+            for alloy design, materials processing, characterization, and mechanical
+            testing to support cutting-edge research in structural materials.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+     Facility Categories
+===================================== -->
+
+{{ range (.Pages.ByWeight.GroupByParam "category") }}
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-header">
+    
+        <h2>{{ .Key }}</h2>
+
+        </div>
+
+        <div class="facility-grid">
+
+            {{ range .Pages }}
+
+            <article class="facility-card">
+
+                <div class="facility-image-wrapper"></div>
+
+                <img
+                src="{{ .Params.image }}"
+                alt="{{ .Title }}"
+                class="facility-image">
+
+                <div class="facility-content">
+
+                    <h3>{{ .Title }}</h3>
+
+                    <div class="facility-description">
+                        {{ .Content }}
+                    </div>
+
+                </div>
+
+            </article>
+
+            {{ end }}
+
+        </div>
+
+    </div>
+
+</section>
+
+{{ end }}
+
+<!-- =====================================
+     Shared Facilities
+===================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-label">
+                SHARED FACILITIES
+            </div>
+
+            <h2>
+                Department & Institute Infrastructure
+            </h2>
+
+            <p>
+                Additional research facilities are available through the
+                Department of Metallurgical Engineering and the central
+                research facilities at IIT (BHU).
+            </p>
+
+        </div>
+
+        <div class="facility-links">
+
+            <a
+                href="https://iitbhu.ac.in/dept/met/labs"
+                target="_blank"
+                rel="noopener"
+                class="facility-link-card">
+
+                <h3>Department of Metallurgical Engineering</h3>
+
+                <p>
+                    Laboratories and facilities available within the department.
+                </p>
+                <span class="facility-link-arrow">
+                   →
+                 </span>
+            </a>
+
+            <a
+                href="https://www.iitbhu.ac.in/rnd/cif/labs"
+                target="_blank"
+                rel="noopener"
+                class="facility-link-card">
+
+                <h3>Central Instrument Facility</h3>
+
+                <p>
+                    Advanced characterization and analytical instruments.
+                </p>
+                <span class="facility-link-arrow">
+                →
+                </span>
+
+            </a>
+
+            <a
+                href="https://www.iitbhu.ac.in/cf/peh/instruments"
+                target="_blank"
+                rel="noopener"
+                class="facility-link-card">
+
+                <h3>Precision Engineering Hub</h3>
+
+                <p>
+                    Specialized manufacturing and precision engineering facilities.
+                </p>
+                <span class="facility-link-arrow">
+                →
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{{ end }}

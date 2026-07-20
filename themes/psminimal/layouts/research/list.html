@@ -1,0 +1,267 @@
+{{ define "main" }}
+
+<!-- Hero -->
+<section class="hero hero-page">
+
+    <div class="hero-content">
+
+        <div class="section-label">
+            RESEARCH
+        </div>
+
+        <h1>
+            Shaping the Future of Structural Materials
+        </h1>
+
+        <p>
+            We integrate computational materials engineering, advanced manufacturing, and experimental characterization to design next-generation structural materials for demanding engineering applications.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="section philosophy">
+
+    <div class="container-small">
+
+        <div class="section-label">
+            RESEARCH PHILOSOPHY
+        </div>
+
+        <h2>
+            Integrating Computation, Processing & Characterization
+        </h2>
+
+        <p class="lead">
+            Our research combines computational materials engineering,
+            thermodynamic modelling, advanced manufacturing, and experimental
+            characterization to accelerate the discovery, processing, and
+            optimization of next-generation structural materials for demanding
+            engineering applications.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="section research-areas">
+
+    <div class="section-header">
+
+        <div class="section-label">
+            RESEARCH AREAS
+        </div>
+
+        <h2>
+            Our Research Areas
+        </h2>
+
+        <p>
+            Our research spans computational alloy design, advanced manufacturing,
+            materials characterization, and surface engineering to address
+            fundamental and applied challenges in structural materials.
+        </p>
+
+    </div>
+
+    <div class="research-grid">
+
+        {{ $areas := where .Pages.ByWeight "Params.type" "area" }}
+
+        {{ range $areas }}
+
+        <div class="research-card">
+
+            <h3>{{ .Title }}</h3>
+
+            <p>
+                {{ .Params.summary }}
+            </p>
+
+            <div class="research-tags">
+
+                {{ range .Params.keywords }}
+                    <span>{{ . }}</span>
+                {{ end }}
+
+            </div>
+
+        </div>
+
+        {{ end }}
+
+    </div>
+
+</section>
+<section class="section current-projects">
+
+    <div class="section-header">
+
+        <div class="section-label">
+            CURRENT RESEARCH
+        </div>
+
+        <h2>
+            Ongoing Research Initiatives
+        </h2>
+
+        <p>
+            Our current research addresses emerging challenges in alloy design,
+            advanced manufacturing, and materials performance through
+            interdisciplinary approaches.
+        </p>
+
+    </div>
+
+    <div class="project-list">
+
+        <div class="project-item">
+            <h3>AI-Assisted Design of Advanced Structural Alloys</h3>
+            <p>Integrating computational thermodynamics and machine learning to accelerate alloy discovery.</p>
+        </div>
+
+        <div class="project-item">
+            <h3>Laser Powder Bed Fusion of Multi-Principal Element Alloys</h3>
+            <p>Understanding process–microstructure–property relationships in additively manufactured alloys.</p>
+        </div>
+
+        <div class="project-item">
+            <h3>Laser Surface Engineering for Enhanced Wear Resistance</h3>
+            <p>Developing advanced coatings and surface modification techniques for demanding environments.</p>
+        </div>
+
+        <div class="project-item">
+            <h3>Microstructure Evolution and Phase Stability</h3>
+            <p>Combining CALPHAD modelling with experimental validation to optimize alloy performance.</p>
+        </div>
+
+    </div>
+
+</section>
+<section class="section research-workflow">
+
+    <div class="section-header">
+
+        <div class="section-label">
+            RESEARCH WORKFLOW
+        </div>
+
+        <h2>
+            From Computational Design to Experimental Validation
+        </h2>
+
+        <p>
+            Our research follows an integrated workflow that combines
+            computational tools, advanced processing, and experimental
+            characterization to accelerate the development of structural materials.
+        </p>
+
+    </div>
+
+    <div class="workflow">
+
+        <div class="workflow-step">
+            <div class="workflow-number">1</div>
+            <h3>Computational Design</h3>
+            <p>CALPHAD, Thermo-Calc, AI-assisted alloy design</p>
+        </div>
+
+        <div class="workflow-arrow">→</div>
+
+        <div class="workflow-step">
+            <div class="workflow-number">2</div>
+            <h3>Materials Processing</h3>
+            <p>Casting, heat treatment, additive manufacturing</p>
+        </div>
+
+        <div class="workflow-arrow">→</div>
+
+        <div class="workflow-step">
+            <div class="workflow-number">3</div>
+            <h3>Characterization</h3>
+            <p>SEM, EBSD, XRD, DIC and microscopy</p>
+        </div>
+
+        <div class="workflow-arrow">→</div>
+
+        <div class="workflow-step">
+            <div class="workflow-number">4</div>
+            <h3>Performance Evaluation</h3>
+            <p>Mechanical testing and property optimization</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     Collaborations & Funding
+========================== -->
+
+<section class="section collaborations">
+
+    <div class="section-header">
+
+        <div class="section-label">
+            COLLABORATIONS & FUNDING
+        </div>
+
+        <h2>
+            Advancing Research Through Strategic Partnerships
+        </h2>
+
+        <p>
+            Our research is strengthened through collaborations with academic
+            institutions, research organizations, and industry partners, supported
+            by competitive national research funding.
+        </p>
+
+    </div>
+
+    <div class="collab-grid">
+
+        <!-- Collaborations -->
+
+        <div class="collab-card">
+
+            <h3>Research Collaborations</h3>
+
+            <ul>
+
+                <li>Academic Institutions</li>
+
+                <li>National Research Laboratories</li>
+
+                <li>Industrial Partners</li>
+
+                <li>International Research Collaborators</li>
+
+            </ul>
+
+        </div>
+
+        <!-- Funding -->
+
+        <div class="collab-card">
+
+            <h3>Funding Support</h3>
+
+            <ul>
+
+                <li>Anusandhan National Research Foundation (ANRF)</li>
+
+                <li>Defense Research and Development Organization (DRDO)</li>
+
+                 <li>Tata Steel Limited (TSL)</li>
+                
+                 <li>Indian Institute of Technology (BHU) Varanasi</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+{{ end }}

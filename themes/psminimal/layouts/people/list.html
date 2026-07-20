@@ -1,0 +1,357 @@
+{{ define "main" }}
+
+{{ $pi := first 1 (where .Pages.ByWeight "Params.type" "pi") }}
+{{ $members := where .Pages.ByWeight "Params.type" "member" }}
+
+{{ $ugteams := where .Pages.ByWeight "Params.type" "ug-team" }}
+
+
+<!-- =========================
+     Hero
+========================== -->
+
+<section class="hero hero-page">
+
+    <div class="hero-content">
+
+        <div class="section-label">
+            PEOPLE
+        </div>
+
+        <h1>
+            Research Team
+        </h1>
+
+        <p>
+            Meet the researchers advancing high-performance structural alloys
+            through computational materials engineering, advanced processing,
+            and experimental characterization.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     Principal Investigator
+========================== -->
+
+{{ range $pi }}
+
+<section class="block">
+
+    <div class="section-header">
+
+        <div class="section-label">
+            PRINCIPAL INVESTIGATOR
+        </div>
+
+        <h2>
+           PI
+        </h2>
+
+    </div>
+
+    <div class="pi-card">
+
+        <div class="pi-photo">
+
+            <img src="{{ .Params.image }}"
+                 alt="{{ .Params.name }}">
+
+        </div>
+
+        <div class="pi-content">
+
+            <h3>{{ .Params.name }}</h3>
+
+            <div class="pi-role">
+
+                {{ .Params.role }}<br>
+
+                {{ .Params.department }}<br>
+
+                {{ .Params.institution }}
+
+            </div>
+
+            <div class="pi-tagline">
+
+                {{ .Params.tagline }}
+
+            </div>
+
+            <p class="pi-bio">
+
+                {{ .Params.bio }}
+
+            </p>
+
+            
+            <div class="pi-links">
+
+    <div class="pi-links-primary">
+
+        <a class="btn-primary"
+           href="{{ .Params.faculty }}"
+           target="_blank">
+
+            Faculty Profile
+
+        </a>
+
+        <a class="btn-primary"
+           href="{{ .Params.scholar }}"
+           target="_blank">
+
+            Google Scholar
+
+        </a>
+
+    </div>
+
+    <div class="pi-links-secondary">
+
+        <a href="{{ .Params.orcid }}" target="_blank">
+            ORCID
+        </a>
+         <span>•</span>
+        <a href="{{ .Params.wos }}" target="_blank">
+            Web of Science
+        </a>
+          <span>•</span>
+        <a href="{{ .Params.linkedin }}" target="_blank">
+            LinkedIn
+        </a>
+
+    </div>
+
+</div>
+
+        </div>
+
+    </div>
+
+    <div class="pi-stats">
+
+    <div class="pi-stat">
+        <span>{{ .Params.stats.publications }}+</span>
+        <small>Publications</small>
+    </div>
+
+    <div class="pi-stat">
+        <span>{{ .Params.stats.hindex }}</span>
+        <small>H-index</small>
+    </div>
+
+    <div class="pi-stat">
+        <span>{{ .Params.stats.bookchapters }}</span>
+        <small>Book Chapters</small>
+    </div>
+
+</div>
+
+
+</section>
+
+{{ end }}
+
+<!-- =========================
+     Research Group
+========================== -->
+
+<section class="block">
+
+    <div class="section-header">
+
+        <div class="section-label">
+
+            RESEARCH GROUP
+
+        </div>
+
+        <h2>
+
+            Researchers and Students
+
+        </h2>
+
+        <p>
+
+              Researchers contributing to computational alloy design,
+              additive manufacturing, laser cladding, and advanced
+              structural materials.
+
+        </p>
+
+    </div>
+
+    <div class="team-grid">
+
+        {{ range $members }}
+
+        <article class="team-card">
+
+            {{ if .Params.image }}
+
+                <img src="{{ .Params.image }}"
+                     alt="{{ .Params.name }}">
+
+            {{ else }}
+
+                <div class="team-placeholder">
+
+                    👥
+
+                </div>
+
+            {{ end }}
+
+            <div class="team-body">
+
+                <h3>
+
+                    {{ .Params.name }}
+
+                </h3>
+
+                <div class="member-role">
+
+                    {{ .Params.role }}
+
+                </div>
+
+                <p>
+
+                    {{ .Params.research }}
+
+                </p>
+
+                {{ with .Params.education }}
+
+                <div class="member-education">
+
+                    <strong>Education:</strong><br>
+
+                    {{ . }}
+
+                </div>
+
+                {{ end }}
+
+                <div class="member-links">
+
+                    {{ with .Params.email }}
+
+                    <a href="mailto:{{ . }}">
+                        Email
+                    </a>
+
+                    {{ end }}
+
+                    {{ with .Params.linkedin }}
+
+                    <a href="{{ . }}"
+                       target="_blank">
+                        LinkedIn
+                    </a>
+
+                    {{ end }}
+
+                </div>
+
+            </div>
+
+        </article>
+
+        {{ end }}
+
+    </div>
+
+</section>
+<section class="block">
+
+    <div class="section-header">
+
+        <div class="section-label">
+            UNDERGRADUATE RESEARCH
+        </div>
+
+        <h2>Students Research Projects</h2>
+
+    </div>
+
+    {{ range $ugteams }}
+
+    <div class="ug-card">
+
+        <h3> Project </h3>
+
+        <p>{{ .Params.research }}</p>
+
+        <h4>Team Members</h4>
+
+        <ul>
+
+            {{ range .Params.members }}
+
+            <li>
+
+                <a href="{{ .linkedin }}" target="_blank">
+
+                    {{ .name }}
+
+                </a>
+
+            </li>
+
+            {{ end }}
+
+        </ul>
+
+    </div>
+
+    {{ end }}
+
+</section>
+
+<!-- =========================
+     Join Group
+========================== -->
+
+<section class="block">
+
+    <div class="join-card">
+
+        <div class="section-label">
+
+            OPPORTUNITIES
+
+        </div>
+
+        <h2>
+
+            Join Our Research Group
+
+        </h2>
+
+        <p>
+
+            We welcome highly motivated students interested in
+            computational materials engineering, advanced structural
+            alloys, additive manufacturing, and surface engineering.
+
+        </p>
+
+        <a class="btn"
+           href="/opportunities/">
+
+            Explore Opportunities
+
+        </a>
+
+    </div>
+
+</section>
+
+{{ end }}

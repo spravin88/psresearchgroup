@@ -1,0 +1,204 @@
+{{ define "main" }}
+
+<!-- =====================================
+     Hero
+====================================== -->
+
+<section class="hero hero-page">
+
+    <div class="hero-content">
+
+        <div class="section-label">
+            PUBLICATIONS
+        </div>
+
+        <h1>
+            Research Publications
+        </h1>
+
+        <p>
+            Our publications reflect contributions to multi principle element alloys, high pressure torsion, additive manufacturing, and tensile deformation behavior
+            published in leading international journals and conferences.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+     Publication Highlights
+====================================== -->
+
+<section class="section publication-highlights">
+
+    <div class="section-header">
+
+        <div class="section-label">
+            HIGHLIGHTS
+        </div>
+
+        <h2>
+            Research Output at a Glance
+        </h2>
+
+        <p>
+            A growing body of peer-reviewed publications showcasing advances in
+            computational alloy design, advanced manufacturing, and materials characterization.
+        </p>
+
+    </div>
+
+    <div class="highlights-grid">
+
+        <div class="highlight-card">
+
+            <div class="highlight-number">
+                50+
+            </div>
+
+            <h3>Publications</h3>
+
+            <p>
+                Peer-reviewed journal articles, book chapters, and conference papers.
+            </p>
+
+        </div>
+
+        <div class="highlight-card">
+
+            <div class="highlight-number">
+                10+
+            </div>
+
+            <h3>Journals</h3>
+
+            <p>
+                Research published across internationally recognized journals.
+            </p>
+
+        </div>
+
+        <div class="highlight-card">
+
+            <div class="highlight-number">
+                2012–
+            </div>
+
+            <h3>Research Journey</h3>
+
+            <p>
+                Continuous scholarly contributions spanning multiple research themes.
+            </p>
+
+        </div>
+
+        <div class="highlight-card">
+
+            <div class="highlight-number">
+                4
+            </div>
+
+            <h3>Research Areas</h3>
+
+            <p>
+                High Entropy Alloys, High Pressure Torsion, Additive Manufacturing, Tensile plastic deformation behavior
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+     Complete Publication List
+====================================== -->
+
+<section class="section publication-list">
+
+    <div class="section-header">
+
+        <div class="section-label">
+            COMPLETE PUBLICATION LIST
+        </div>
+
+        <h2>
+            Publications
+        </h2>
+
+        <p>
+            The publication list below is automatically synchronized with our
+            research database. Author names, publication details, and links are
+            updated as new publications become available.
+        </p>
+
+    </div>
+
+    <div class="bibbase-container">
+
+        <script src="https://bibbase.org/service/mendeley/19feee0a-83ed-3c3a-96fa-9146fe4d6ab1/group/513214b7-784a-391c-846b-34805da53481?jsonp=1&folding=1&hidemenu=undefined"></script>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+     Research Profiles
+====================================== -->
+
+<section class="section research-profiles">
+
+    <div class="section-header">
+
+        <div class="section-label">
+            RESEARCH PROFILES
+        </div>
+
+        <h2>
+            Explore Our Research
+        </h2>
+
+        <p>
+            Access complete publication records, citation metrics,
+            and researcher profiles through the platforms below.
+        </p>
+
+    </div>
+
+    <div class="profile-links">
+
+        <a href="{{ .Site.Params.googleScholar }}"
+           target="_blank"
+           rel="noopener">
+            Google Scholar
+        </a>
+
+        {{ with .Site.Params.orcid }}
+        <a href="{{ . }}"
+           target="_blank"
+           rel="noopener">
+            ORCID
+        </a>
+        {{ end }}
+
+        {{ with .Site.Params.scopus }}
+        <a href="{{ . }}"
+           target="_blank"
+           rel="noopener">
+            Scopus
+        </a>
+        {{ end }}
+
+        {{ with .Site.Params.researchgate }}
+        <a href="{{ . }}"
+           target="_blank"
+           rel="noopener">
+            ResearchGate
+        </a>
+        {{ end }}
+
+    </div>
+
+</section>
+
+{{ end }}

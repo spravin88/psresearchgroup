@@ -1,0 +1,65 @@
+baseURL = "https://www.psresearchgroup.com/"
+languageCode = "en-us"
+title = "Praveen Sathiyamoorthi's Research Group"
+theme = "psminimal"
+disableKinds = ["taxonomy", "term"]
+enableRobotsTXT = true
+
+[params]
+  author = "PS Research Group"
+  tagline = "High-Performance Structural Alloys"
+  institute = "IIT (BHU) Varanasi"
+  email = "praveens.met@iitbhu.ac.in"
+  googleScholar = "https://scholar.google.com/citations?user=v745JdMAAAAJ&hl=en"
+  description = "The PS Research Group develops advanced structural materials through computational materials engineering, thermodynamic modelling, additive manufacturing, surface engineering, and experimental characterization."
+  [menu]
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 2
+
+[[menu.main]]
+name = "Research"
+url = "/research/"
+weight = 3
+
+[[menu.main]]
+name = "People"
+url = "/people/"
+weight = 4
+
+[[menu.main]]
+name = "Publications"
+url = "/publications/"
+weight = 5
+
+[[menu.main]]
+name = "Facilities"
+url = "/facilities/"
+weight = 6
+
+[[menu.main]]
+name = "Teaching"
+url = "/teaching/"
+weight = 7
+
+[[menu.main]]
+name = "News"
+url = "/news/"
+weight = 8
+
+[[menu.main]]
+name = "Gallery"
+url = "/gallery/"
+weight = 9
+
+[[menu.main]]
+name = "Alumni"
+url = "/alumni/"
+weight = 10

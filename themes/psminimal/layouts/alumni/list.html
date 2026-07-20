@@ -1,0 +1,61 @@
+{{ define "main" }}
+
+{{ $research := where .Pages "Params.category" "Research Staff" }}
+{{ $mtech := where .Pages "Params.category" "M.Tech" }}
+{{ $ug := where .Pages "Params.category" "Undergraduate" }}
+
+<!-- =====================================
+     Hero
+===================================== -->
+
+<section class="hero hero-page">
+
+    <div class="hero-content">
+
+        <div class="section-label">
+            PAST STUDENTS
+        </div>
+
+        <h1>
+            Past Students
+        </h1>
+
+        <p>
+            Former research staff, M.Tech, IDD, and undergraduate students who
+            contributed to the PS Research Group through research in
+            computational materials engineering, structural alloys, and
+            advanced manufacturing.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+     Research Staff & Scholars
+===================================== -->
+
+{{ partial "alumni-section.html" (dict
+    "title" "Research Staff & Scholars"
+    "pages" $research
+) }}
+
+<!-- =====================================
+     M.Tech Students
+===================================== -->
+
+{{ partial "alumni-section.html" (dict
+    "title" "M.Tech Students"
+    "pages" $mtech
+) }}
+
+<!-- =====================================
+     Undergraduate Students
+===================================== -->
+
+{{ partial "alumni-section.html" (dict
+    "title" "Undergraduate Students"
+    "pages" $ug
+) }}
+
+{{ end }}

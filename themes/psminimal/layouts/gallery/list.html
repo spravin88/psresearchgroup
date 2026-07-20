@@ -1,0 +1,126 @@
+{{ define "main" }}
+
+<!-- =====================================
+     Hero
+===================================== -->
+
+<section class="hero hero-page">
+
+    <div class="hero-content">
+
+        <div class="section-label">
+            GALLERY
+        </div>
+
+        <h1>
+            Gallery
+        </h1>
+
+        <p>
+            Snapshots of research activities, laboratory facilities,
+            conferences, workshops, student achievements, and memorable
+            moments from the PS Research Group.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+     Gallery
+===================================== -->
+
+{{ range .Site.Data.gallery.categories }}
+
+{{ $slug := .slug }}
+{{ $catTitle := .title }}
+{{ $dir := printf "static/images/gallery/%s" $slug }}
+
+<section class="gallery-section">
+
+    <div class="container">
+
+        <h2 class="gallery-category">
+            {{ .title }}
+        </h2>
+
+        <div class="gallery-grid">
+
+            {{ range readDir $dir }}
+
+                {{ if not .IsDir }}
+
+                <img
+                    src="{{ printf "/images/gallery/%s/%s" $slug .Name | relURL }}"
+                    alt="{{ printf "%s - %s" $catTitle .Name }}"
+                    loading="lazy"
+                    onclick="openLightbox(this.src)">
+
+                {{ end }}
+
+            {{ end }}
+
+        </div>
+
+    </div>
+
+</section>
+
+{{ end }}
+
+<!-- =====================================
+     Lightbox
+===================================== -->
+
+<div
+    class="lightbox-overlay"
+    id="lightbox"
+    onclick="closeLightbox()">
+
+    <button
+        class="lightbox-close"
+        onclick="closeLightbox()">
+
+        &times;
+
+    </button>
+
+    <img
+        id="lightbox-img"
+        src=""
+        alt="">
+
+</div>
+
+<!-- =====================================
+     Script
+===================================== -->
+
+<script>
+
+function openLightbox(src) {
+
+    document.getElementById("lightbox-img").src = src;
+    document.getElementById("lightbox").classList.add("open");
+
+}
+
+function closeLightbox() {
+
+    document.getElementById("lightbox").classList.remove("open");
+
+}
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+
+        closeLightbox();
+
+    }
+
+});
+
+</script>
+
+{{ end }}

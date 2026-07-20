@@ -1,0 +1,87 @@
+journal:
+  - year: 2023
+    authors: "Kwon, H., **Sathiyamoorthi, P.**, Gangaraju, M.K., Zargaran, A., Wang, J., Heo, Y.-U., Harjo, S., Gong, W., Lee, B.-J., Kim, H.S."
+    title: "High-density nanoprecipitates and phase reversion via maraging enable ultrastrong yet strain-hardenable medium-entropy alloy"
+    venue: "Acta Materialia, 248 (2023), 118810"
+    link: "https://www.sciencedirect.com/science/article/pii/S1359645423001416?dgcid=author"
+    tag: "Co-first author"
+  - year: 2022
+    authors: "Nguyen, N.T.-C., Asghari-Rad, P., Zargaran, A., Kim, E.S., **Sathiyamoorthi, P.**, Kim, H.S."
+    title: "Relation of phase fraction to superplastic behavior of multi-principal element alloy with a multi-phase structure"
+    venue: "Scripta Materialia, 221 (2022), 114949"
+    link: "https://www.sciencedirect.com/science/article/pii/S1359646222004444"
+    tag: "Co-corresponding author"
+  - year: 2022
+    authors: "**Sathiyamoorthi, P.**, Kim, H.S."
+    title: "High-entropy alloys with heterogeneous microstructure: processing and mechanical properties"
+    venue: "Progress in Materials Science, 123 (2022)"
+    link: "https://www.sciencedirect.com/science/article/pii/S0079642520300736"
+    tag: ""
+  - year: 2022
+    authors: "Asghari-Rad, P., Nguyen, N.T.-C., Zargaran, A., **Sathiyamoorthi, P.**, Kim, H.S."
+    title: "Deformation-induced grain boundary segregation mediated high-strain rate superplasticity in medium entropy alloy"
+    venue: "Scripta Materialia, 207 (2022), 114239"
+    link: "https://www.sciencedirect.com/science/article/pii/S1359646221005194"
+    tag: "Co-corresponding author"
+  - year: 2021
+    authors: "Karthik, G.M., Kim, E.S., **Sathiyamoorthi, P.**, Zargaran, A., Jeong, S.G., Xiong, R., Kang, S.H., Cho, J.-W., Kim, H.S."
+    title: "Delayed deformation-induced martensite transformation and enhanced cryogenic tensile properties in laser additive manufactured 316L austenitic stainless steel"
+    venue: "Additive Manufacturing, 47 (2021), 102314"
+    link: "https://www.sciencedirect.com/science/article/pii/S2214860421004723"
+    tag: ""
+  - year: 2021
+    authors: "Kwon, H., **Sathiyamoorthi, P.**, Karthik, G.M., Asghari-Rad, P., Zargaran, A., Do, H.-S., Lee, B.-J., Kato, H., Kim, H.S."
+    title: "2.3 GPa cryogenic strength through thermal-induced and deformation-induced body-centered cubic martensite in a novel ferrous medium entropy alloy"
+    venue: "Scripta Materialia, 204 (2021), 114157"
+    link: "https://www.sciencedirect.com/science/article/pii/S1359646221004371"
+    tag: "Co-first author"
+  - year: 2021
+    authors: "Asghari-Rad, P., **Sathiyamoorthi, P.**, Nguyen, N.T.-C., Zargaran, A., Kim, T.S., Kim, H.S."
+    title: "A powder-metallurgy-based fabrication route towards achieving high tensile strength with ultra-high ductility in high-entropy alloy"
+    venue: "Scripta Materialia, 190 (2021), 69-74"
+    link: "https://www.sciencedirect.com/science/article/pii/S1359646220305649"
+    tag: ""
+  - year: 2020
+    authors: "Nguyen, N.T.-C., Asghari-Rad, P., **Sathiyamoorthi, P.**, Zargaran, A., Lee, C.S., Kim, H.S."
+    title: "Ultrahigh high-strain-rate superplasticity in a nanostructured high-entropy alloy"
+    venue: "Nature Communications, 11 (2020), 1-7"
+    link: "https://www.nature.com/articles/s41467-020-16601-1"
+    tag: ""
+  - year: 2019
+    authors: "**Sathiyamoorthi, P.**, Park, J.M., Moon, J., Bae, J.W., Asghari-Rad, P., Zargaran, A., Kim, H.S."
+    title: "Achieving high strength and high ductility in Al0.3CoCrNi medium-entropy alloy through multi-phase hierarchical microstructure"
+    venue: "Materialia, 8 (2019), 100442"
+    link: "https://www.sciencedirect.com/science/article/pii/S2589152919302388"
+    tag: ""
+  - year: 2019
+    authors: "**Sathiyamoorthi, P.**, Moon, J., Bae, J.W., Asghari-Rad, P., Kim, H.S."
+    title: "Superior cryogenic tensile properties of ultrafine-grained CoCrNi medium-entropy alloy produced by high-pressure torsion and annealing"
+    venue: "Scripta Materialia, 163 (2019), 152-156"
+    link: "https://www.sciencedirect.com/science/article/pii/S1359646219300338"
+    tag: ""
+  - year: 2017
+    authors: "**Sathiyamoorthi, P.**, Basu, J., Kashyap, S., Pradeep, K.G., Kottada, R.S."
+    title: "Thermal stability and grain boundary strengthening in ultrafine-grained CoCrFeNi high entropy alloy composite"
+    venue: "Materials & Design, 134 (2017), 426-433"
+    link: "https://www.sciencedirect.com/science/article/pii/S0264127517308110"
+    tag: ""
+
+bookChapters:
+  - authors: "**Sathiyamoorthi, P.**, Chawake, N.M."
+    title: "How Does Powder Metallurgy Facilitate the Preparation of Intermetallics and High-Entropy Alloys?"
+    venue: "Powder Metallurgy and Additive Manufacturing: Fundamentals and Advancements, pp. 191-206. Eds. S. Rajendrachari, D. Chaira. ASM International, 2024. ISBN (electronic): 978-1-62708-479-6"
+    link: "https://doi.org/10.31399/asm.tb.pmamfa.t59400191"
+  - authors: "**Sathiyamoorthi, P.**, Kim, H.S."
+    title: "Nanocrystalline high entropy alloys: processing and properties"
+    venue: "Encyclopedia of Materials: Metals and Alloys, Vol. 2, pp. 372-380. Eds. G. Miyamoto, M.C. Gao. Elsevier, 2022. ISBN: 9780128197264"
+    link: "https://www.sciencedirect.com/science/article/pii/B9780128035818117205?via%3Dihub"
+
+conference:
+  - authors: "Ang, A.S.M., Berndt, C.C., Sesso, M.L., Anupam, A., **Praveen, S.**, Kottada, R.S., Murty, B.S."
+    title: "Comparison of Plasma-Sprayed High Entropy Alloys with Conventional Bond Coat Materials"
+    venue: "Proceedings of the ITSC2015, International Thermal Spray Conference. ASM, May 11-14, 2015"
+    link: "https://doi.org/10.31399/asm.cp.itsc2015p0027"
+  - authors: "Ang, A.S.M., Berndt, C.C., Sesso, M.L., Anupam, A., **Praveen, S.**, Kottada, R.S., Murty, B.S."
+    title: "Plasma Sprayed AlCoCrFeNi and MnCoCrFeNi High Entropy Alloys: High Temperature Stability, Coating Elastic Properties, and Surface Roughness"
+    venue: "International Conference on Advancements and Futuristic Trends in Mechanical and Materials Engineering, Oct 16-18, 2014"
+    link: ""

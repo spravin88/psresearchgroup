@@ -1,0 +1,209 @@
+<section class="block">
+
+    <div class="section-header">
+
+        <h2>{{ .title }}</h2>
+
+    </div>
+
+    <div class="alumni-grid">
+
+        {{ $sorted := sort .pages "Params.name" }}
+
+        {{ range sort $sorted "Params.sort_year" "desc" }}
+
+        {{ $page := . }}
+
+       
+
+        <article class="alumni-card">
+
+            <div class="alumni-body">
+
+                {{/* =====================================
+                     Undergraduate Research Projects
+                ====================================== */}}
+
+                {{ if eq .Params.category "Undergraduate" }}
+
+                    <h3>
+
+                        Undergraduate Research Project{{ with .Params.year }} ({{ . }}){{ end }}
+
+                    </h3>
+
+                    {{ with .Params.research }}
+
+                    <div class="alumni-meta">
+
+                        {{ . }}
+
+                    </div>
+
+                    {{ end }}
+
+                    {{ with .Params.members }}
+
+                    <div class="alumni-meta">
+
+                        <strong>Team Members</strong>
+
+                        <ul class="alumni-members">
+
+                            {{ range . }}
+
+                            <li>
+
+                                <a href="{{ .linkedin }}" target="_blank">
+
+                                    {{ .name }}
+
+                                </a>
+
+                            </li>
+
+                            {{ end }}
+
+                        </ul>
+
+                    </div>
+
+                    {{ end }}
+
+                {{ else }}
+
+                {{/* =====================================
+                     Research Staff / M.Tech / IDD
+                ====================================== */}}
+
+                    <h3>
+
+                        {{ with .Params.linkedin }}
+
+                        <a href="{{ . }}" target="_blank" class="alumni-name">
+
+                            {{ $page.Params.name }}
+
+                        </a>
+
+                        {{ else }}
+
+                            {{ $page.Params.name }}
+
+                        {{ end }}
+
+                    </h3>
+
+                    <div class="alumni-role">
+
+                        {{ .Params.role }}
+
+                    </div>
+
+                    {{ with .Params.education }}
+
+                    <div class="alumni-meta">
+
+                        <strong>Education:</strong><br>
+
+                        {{ . }}
+
+                    </div>
+
+                    {{ end }}
+
+                    {{ with .Params.phd_topic }}
+
+                    <div class="alumni-meta">
+
+                        <strong>Research Topic:</strong><br>
+
+                        {{ . }}
+
+                    </div>
+
+                    {{ end }}
+
+                    {{ with .Params.project }}
+
+                    <div class="alumni-meta">
+
+                        <strong>Project:</strong><br>
+
+                        {{ . }}
+
+                    </div>
+
+                    {{ end }}
+
+                    {{ with .Params.period }}
+
+                    <div class="alumni-meta">
+
+                        <strong>Duration:</strong><br>
+
+                        {{ . }}
+
+                    </div>
+
+                    {{ end }}
+
+                    {{ with .Params.research }}
+
+                    <div class="alumni-meta">
+
+                        <strong>
+
+                            Project{{ with $page.Params.year }} ({{ . }}){{ end }}
+
+                        </strong><br>
+
+                        {{ . }}
+
+                    </div>
+
+                    {{ end }}
+
+                    {{ with .Params.btech_thesis }}
+
+                    <div class="alumni-meta">
+
+                        <strong>
+
+                            B.Tech Thesis{{ with $page.Params.btech_year }} ({{ . }}){{ end }}
+
+                        </strong><br>
+
+                        {{ . }}
+
+                    </div>
+
+                    {{ end }}
+
+                    {{ with .Params.mtech_thesis }}
+
+                    <div class="alumni-meta">
+
+                        <strong>
+
+                            M.Tech Thesis{{ with $page.Params.mtech_year }} ({{ . }}){{ end }}
+
+                        </strong><br>
+
+                        {{ . }}
+
+                    </div>
+
+                    {{ end }}
+
+                {{ end }}
+
+            </div>
+
+        </article>
+
+        {{ end }}
+
+    </div>
+
+</section>

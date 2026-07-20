@@ -996,13 +996,13 @@ section.block img[src*="/images/team/"] {
    11. About page & stats
    ========================================================== */
 
-/* Consolidated from 3 duplicate revisions above; sized down ~50%
-   per request (was: padding 1.5rem, minmax 160px, value 2rem) */
+/* Consolidated from 3 duplicate revisions above; sized down ~50%,
+   then back up ~25% per follow-up request. */
 .stat-card {
   background: white;
   border: 1px solid var(--border);
   border-radius: 10px;
-  padding: 0.75rem 1rem;
+  padding: 0.9375rem 1.25rem;
   text-align: center;
   box-shadow: 0 2px 6px rgba(0,0,0,.06);
   transition: transform .2s ease, box-shadow .2s ease;
@@ -1013,16 +1013,20 @@ section.block img[src*="/images/team/"] {
   box-shadow: 0 4px 10px rgba(0,0,0,.10);
 }
 
+/* FIX: 1fr columns stretched cards to fill the full 520px row,
+   spreading them out and breaking the left alignment of the photo/
+   name block above. max-content sizes columns to their content and
+   auto-fit collapses unused tracks, so the row hugs the left edge. */
 .about-stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(125px, max-content));
+  justify-content: start;
+  gap: 0.9375rem;
   margin-top: 1.5rem;
-  max-width: 520px;
 }
 
 .stat-value {
-  font-size: 1.15rem;
+  font-size: 1.4375rem;
   font-weight: 700;
   color: var(--primary);
   margin-bottom: .2rem;
@@ -1030,7 +1034,7 @@ section.block img[src*="/images/team/"] {
 
 .stat-label {
   color: var(--text-light);
-  font-size: .7rem;
+  font-size: .875rem;
 }
 
 .about-hero {

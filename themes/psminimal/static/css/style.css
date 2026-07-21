@@ -2374,6 +2374,10 @@ section.block img[src*="/images/team/"] {
   display: block;
 }
 
+.hero-team-photo {
+  object-position: center 20%;
+}
+
 /* ==========================================================
    23. Achievement strip (About page)
    ========================================================== */
@@ -2495,6 +2499,10 @@ section.block img[src*="/images/team/"] {
   width: 100%;
   height: 260px;
   object-fit: cover;
+}
+
+.gallery-toplevel-thumb-team {
+  object-position: center 20%;
 }
 
 .gallery-toplevel-card h3 {

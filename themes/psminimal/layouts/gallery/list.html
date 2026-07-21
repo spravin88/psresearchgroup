@@ -36,26 +36,12 @@
       <div class="gallery-toplevel-grid">
 
         <div class="gallery-toplevel-card" onclick="showAlbum('{{ $teamSlug }}', 'level1')">
-          {{ range $categories }}
-            {{ if eq .slug $teamSlug }}
-              {{ $files := index $albumImages .slug }}
-              {{ if $files }}
-              <img src="{{ index $files 0 }}" alt="Team Moments">
-              {{ end }}
-            {{ end }}
-          {{ end }}
+          <img src="/images/gallery/team-moments/group-picture.jpg" alt="Team Moments" class="gallery-toplevel-thumb-team">
           <h3>Team Moments</h3>
         </div>
 
         <div class="gallery-toplevel-card" onclick="showLevel('gallery-level-2')">
-          {{ range $categories }}
-            {{ if ne .slug $teamSlug }}
-              {{ $files := index $albumImages .slug }}
-              {{ if $files }}
-              <img src="{{ index $files 0 }}" alt="Conferences">
-              {{ end }}
-            {{ end }}
-          {{ end }}
+          <img src="/images/gallery/iim-atm-2025/photo-01.jpg" alt="Conferences">
           <h3>Conferences</h3>
         </div>
 

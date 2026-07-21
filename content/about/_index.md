@@ -40,7 +40,7 @@ stats:
   - value: "2"
     label: "Book Chapters"
 
-  - value: "6"
+  - value: "9"
     label: "Invited Talks"
 
 quick_facts:

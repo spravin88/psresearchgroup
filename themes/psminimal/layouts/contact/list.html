@@ -1,0 +1,74 @@
+{{ define "main" }}
+
+<!-- =====================================
+     Hero
+===================================== -->
+
+<section class="hero hero-page">
+
+    <div class="hero-content">
+
+        <div class="section-label">
+            CONTACT
+        </div>
+
+        <h1>
+            Get in Touch
+        </h1>
+
+        <p>
+            Reach out for collaborations, prospective student inquiries,
+            or general questions about our research.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+     Contact Details
+===================================== -->
+
+<section class="section contact-details">
+
+    <div class="container">
+
+        <div class="info-card-grid">
+
+            <div class="info-card">
+
+                <h3>{{ .Params.name }}</h3>
+
+                <p>{{ .Params.designation }}</p>
+
+                {{ range .Params.office_lines }}
+                <p>{{ . }}</p>
+                {{ end }}
+
+            </div>
+
+            <div class="info-card">
+
+                <h3>Reach Me</h3>
+
+                <p>
+                    <strong>Email:</strong>
+                    <a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a>
+                </p>
+
+                <p>
+                    <strong>Faculty Profile:</strong>
+                    <a href="{{ .Params.faculty_profile_url }}" target="_blank" rel="noopener">
+                        IIT (BHU) Department Page
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{{ end }}

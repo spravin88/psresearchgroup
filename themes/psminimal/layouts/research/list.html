@@ -21,6 +21,67 @@
 
 </section>
 
+<!-- =========================
+     Research Highlights
+========================== -->
+
+<section class="section research-highlights">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-label">
+                SELECTED WORK
+            </div>
+
+            <h2>
+                Research Highlights
+            </h2>
+
+            <p>
+                Selected highlights from Dr. Sathiyamoorthi's PhD and postdoctoral
+                research, which continue to inform the group's current direction.
+            </p>
+
+        </div>
+
+        <div class="gallery-grid">
+            <img src="/images/research-highlights/01-research-areas-overview.jpg" alt="Research areas overview" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="/images/research-highlights/02-hpt-grain-refinement.jpg" alt="Absence of conventional grain refinement" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="/images/research-highlights/03-heterogeneous-microstructure.jpg" alt="Heterogeneous microstructure and deformation strengthening" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="/images/research-highlights/04-superplasticity.jpg" alt="High strain rate superplasticity" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="/images/research-highlights/05-hpt-consolidation.jpg" alt="HPT as consolidation technique" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="/images/research-highlights/06-cryogenic-tensile.jpg" alt="Enhanced cryogenic tensile properties" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="/images/research-highlights/07-thermal-stability.jpg" alt="Thermal stability of MA powders and SPS pellets" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="/images/research-highlights/08-book-chapter.jpg" alt="Book chapter: Nanocrystalline High Entropy Alloys" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="/images/research-highlights/09-pms-review.jpg" alt="Review article in Progress in Materials Science" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="/images/research-highlights/10-asn-feature.jpg" alt="Review article featured in Advanced Science News" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="/images/research-highlights/11-top2percent-award.jpg" alt="Stanford / Elsevier Top 2% Scientists listing" loading="lazy" onclick="openLightbox(this.src)">
+        </div>
+
+    </div>
+
+</section>
+
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+}
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+});
+</script>
+
 <section class="section philosophy">
 
     <div class="container-small">
@@ -204,7 +265,7 @@
     <div class="section-header">
 
         <div class="section-label">
-            FUNDED PROJECTS
+            GRANTS &amp; SPONSORSHIP
         </div>
 
         <h2>

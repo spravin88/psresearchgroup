@@ -27,6 +27,44 @@
 </section>
 
 <!-- =====================================
+     Our Lab
+===================================== -->
+
+<section class="section our-lab">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-label">
+                OUR LAB
+            </div>
+
+            <h2>
+                Where We Work
+            </h2>
+
+            <p>
+                A look at the group's working and sample preparation spaces.
+            </p>
+
+        </div>
+
+        <div class="lab-photo-grid">
+            <img src="/images/lab/sitting-1.jpg" alt="Sitting area">
+            <img src="/images/lab/sitting-2.jpg" alt="Sitting area">
+            <img src="/images/lab/sitting-3.jpg" alt="Sitting area">
+            <img src="/images/lab/working-1.jpg" alt="Working area">
+            <img src="/images/lab/working-2.jpg" alt="Working area">
+            <img src="/images/lab/working-3.jpg" alt="Working area">
+            <img src="/images/lab/working-4.jpg" alt="Working area">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
      Facility Categories
 ===================================== -->
 
@@ -54,6 +92,14 @@
                 src="{{ .Params.image }}"
                 alt="{{ .Title }}"
                 class="facility-image">
+
+                {{ if .Params.images }}
+                <div class="facility-image-strip">
+                    {{ range .Params.images }}
+                    <img src="{{ . }}" alt="{{ $.Title }}" class="facility-image-thumb">
+                    {{ end }}
+                </div>
+                {{ end }}
 
                 <div class="facility-content">
 

@@ -82,6 +82,10 @@ h1,h2,h3 {
   margin-top: 0;
 }
 
+h2 {
+  color: var(--primary);
+}
+
 /* ==========================================================
    03. Layout containers
    ========================================================== */
@@ -263,6 +267,14 @@ h1,h2,h3 {
 /* NOTE: '.hero-page p' redefined (revision 2) — later declarations win */
 .hero-page p {
   max-width: 700px;
+}
+
+/* FIX: inner-page hero titles inherited .hero h1's large homepage-
+   scale font-size (clamp 2.8-4.5rem) and wrapped to multiple lines
+   inside the 760px hero-page column. Placed after .hero h1 in
+   cascade order so it correctly wins for pages with both classes. */
+.hero-page h1 {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
 }
 
 /* ==========================================================
@@ -2278,4 +2290,71 @@ section.block img[src*="/images/team/"] {
     left: -28px;
     right: auto;
   }
+}
+
+/* ==========================================================
+   19. Section spacing fixes (Research & Publications pages)
+   These section-modifier classes had zero CSS anywhere,
+   causing sections to butt flush against each other with no
+   vertical rhythm, unlike About/Home which use styled classes.
+   ========================================================== */
+
+.philosophy,
+.research-areas,
+.current-projects,
+.research-workflow,
+.funded-projects,
+.collaborations,
+.research-highlights,
+.publication-highlights,
+.publication-list,
+.research-profiles,
+.our-lab {
+  padding: 50px 0;
+}
+
+.section-header {
+  margin-bottom: 2rem;
+}
+
+/* ==========================================================
+   20. Publications page — BibBase embed overflow fix
+   The BibBase widget can render wide unconstrained content;
+   without a max-width/overflow guard it was forcing the whole
+   page wider than the viewport, squeezing the nav.
+   ========================================================== */
+
+.bibbase-container {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* ==========================================================
+   21. Facility multi-image support & Our Lab photo grid
+   ========================================================== */
+
+.facility-image-strip {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.facility-image-thumb {
+  width: 33%;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.lab-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.lab-photo-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
 }

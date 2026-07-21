@@ -1,10 +1,7 @@
 ---
 title: "Digital Image Correlation (DIC) Setup"
 weight: 3.5
-image: "/images/facilities/dic-1.jpg"
-images:
-  - "/images/facilities/dic-2.jpg"
-  - "/images/facilities/dic-3.jpg"
+image: "/images/facilities/dic-montage.jpg"
 category: "Mechanical Testing"
 ---
 

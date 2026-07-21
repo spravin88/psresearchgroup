@@ -1,4 +1,8 @@
 categories:
+  - title: "Team Moments"
+    slug: team-moments
+  - title: "IIM ATM 2025, IIT Hyderabad, Dec 3-6, 2025"
+    slug: iim-atm-2025
   - title: "Workshop on Laser Cladding for TSL Applications, R&D Centre, Tata Steel, Jamshedpur, 2026"
     slug: laser-cladding-workshop
   - title: "International Conference on Additive Manufacturing and Characterization (ICAMC), IIT Madras, Feb 2026"

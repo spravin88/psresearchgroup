@@ -2433,3 +2433,152 @@ section.block img[src*="/images/team/"] {
   margin-top: .5rem;
   line-height: 1.4;
 }
+
+/* ==========================================================
+   25. Mobile fixes — hero grid & wide tables
+   ========================================================== */
+
+/* FIX: .hero was a fixed 2-column grid at every screen width,
+   squeezing heading text and the hero image into narrow slivers
+   on phones instead of stacking. */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .hero-image img {
+    min-height: 200px;
+  }
+}
+
+/* FIX: teaching/funded-projects tables had no overflow handling,
+   forcing the whole page wider than the viewport on phones. Now
+   the table scrolls horizontally within its own box instead. */
+.teaching-content {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.teaching-content table {
+  min-width: 600px;
+}
+
+/* ==========================================================
+   26. Gallery — two-level card navigation
+   ========================================================== */
+
+.gallery-toplevel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.gallery-toplevel-card,
+.gallery-album-card {
+  cursor: pointer;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.gallery-toplevel-card:hover,
+.gallery-album-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.10);
+}
+
+.gallery-toplevel-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.gallery-toplevel-card h3 {
+  padding: 1rem 1.25rem;
+  margin: 0;
+}
+
+.gallery-album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.gallery-album-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.gallery-album-card h4 {
+  padding: .85rem 1rem;
+  margin: 0;
+  font-size: .95rem;
+  line-height: 1.4;
+}
+
+.gallery-back {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.gallery-back:hover {
+  background: #f3f4f6;
+}
+
+.gallery-photos h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* ==========================================================
+   27. Lightbox prev/next navigation
+   ========================================================== */
+
+.lightbox-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,.15);
+  color: #fff;
+  border: none;
+  font-size: 1.8rem;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.lightbox-nav:hover {
+  background: rgba(255,255,255,.3);
+}
+
+.lightbox-prev {
+  left: 24px;
+}
+
+.lightbox-next {
+  right: 24px;
+}
+
+@media (max-width: 600px) {
+  .lightbox-nav {
+    width: 42px;
+    height: 42px;
+    font-size: 1.4rem;
+  }
+  .lightbox-prev { left: 8px; }
+  .lightbox-next { right: 8px; }
+}

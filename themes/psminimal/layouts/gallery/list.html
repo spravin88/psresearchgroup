@@ -1,126 +1,164 @@
 {{ define "main" }}
 
-<!-- =====================================
-     Hero
-===================================== -->
-
 <section class="hero hero-page">
-
-    <div class="hero-content">
-
-        <div class="section-label">
-            GALLERY
-        </div>
-
-        <h1>
-            Gallery
-        </h1>
-
-        <p>
-            Snapshots of research activities, laboratory facilities,
-            conferences, workshops, student achievements, and memorable
-            moments from the PS Research Group.
-        </p>
-
-    </div>
-
+  <div class="hero-content">
+    <div class="section-label">GALLERY</div>
+    <h1>Gallery</h1>
+    <p>Moments from conferences, workshops, and life in the lab.</p>
+  </div>
 </section>
 
-<!-- =====================================
-     Gallery
-===================================== -->
+<section class="section gallery-nav">
+  <div class="container">
 
-{{ range .Site.Data.gallery.categories }}
+    {{ $categories := .Site.Data.gallery.categories }}
+    {{ $teamSlug := "team-moments" }}
 
-{{ $slug := .slug }}
-{{ $catTitle := .title }}
-{{ $dir := printf "static/images/gallery/%s" $slug }}
+    <!-- Build a map of slug -> image list, and slug -> title, for JS lightbox nav -->
+    {{ $albumImages := dict }}
+    {{ $albumTitles := dict }}
+    {{ range $categories }}
+      {{ $slug := .slug }}
+      {{ $title := .title }}
+      {{ $dir := printf "static/images/gallery/%s" $slug }}
+      {{ $files := slice }}
+      {{ range readDir $dir }}
+        {{ if not .IsDir }}
+          {{ $files = $files | append (printf "/images/gallery/%s/%s" $slug .Name) }}
+        {{ end }}
+      {{ end }}
+      {{ $albumImages = merge $albumImages (dict $slug $files) }}
+      {{ $albumTitles = merge $albumTitles (dict $slug $title) }}
+    {{ end }}
 
-<section class="gallery-section">
+    <!-- LEVEL 1: top cards -->
+    <div id="gallery-level-1" class="gallery-level">
+      <div class="gallery-toplevel-grid">
 
-    <div class="container">
-
-        <h2 class="gallery-category">
-            {{ .title }}
-        </h2>
-
-        <div class="gallery-grid">
-
-            {{ range readDir $dir }}
-
-                {{ if not .IsDir }}
-
-                <img
-                    src="{{ printf "/images/gallery/%s/%s" $slug .Name | relURL }}"
-                    alt="{{ printf "%s - %s" $catTitle .Name }}"
-                    loading="lazy"
-                    onclick="openLightbox(this.src)">
-
-                {{ end }}
-
+        <div class="gallery-toplevel-card" onclick="showAlbum('{{ $teamSlug }}', 'level1')">
+          {{ range $categories }}
+            {{ if eq .slug $teamSlug }}
+              {{ $files := index $albumImages .slug }}
+              {{ if $files }}
+              <img src="{{ index $files 0 }}" alt="Team Moments">
+              {{ end }}
             {{ end }}
-
+          {{ end }}
+          <h3>Team Moments</h3>
         </div>
 
+        <div class="gallery-toplevel-card" onclick="showLevel('gallery-level-2')">
+          {{ range $categories }}
+            {{ if ne .slug $teamSlug }}
+              {{ $files := index $albumImages .slug }}
+              {{ if $files }}
+              <img src="{{ index $files 0 }}" alt="Conferences">
+              {{ end }}
+            {{ end }}
+          {{ end }}
+          <h3>Conferences</h3>
+        </div>
+
+      </div>
     </div>
 
+    <!-- LEVEL 2: conference album picker -->
+    <div id="gallery-level-2" class="gallery-level" style="display:none;">
+      <button class="gallery-back" onclick="showLevel('gallery-level-1')">&larr; Back</button>
+      <div class="gallery-album-grid">
+        {{ range $categories }}
+        {{ if ne .slug $teamSlug }}
+        {{ $files := index $albumImages .slug }}
+        <div class="gallery-album-card" onclick="showAlbum('{{ .slug }}', 'level2')">
+          {{ if $files }}
+          <img src="{{ index $files 0 }}" alt="{{ .title }}">
+          {{ end }}
+          <h4>{{ .title }}</h4>
+        </div>
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+
+    <!-- LEVEL 3: photo grids, one per album -->
+    {{ range $categories }}
+    <div id="album-{{ .slug }}" class="gallery-level gallery-photos" style="display:none;">
+      <button class="gallery-back" onclick="backFromAlbum('{{ .slug }}')">&larr; Back</button>
+      <h2>{{ .title }}</h2>
+      <div class="gallery-grid">
+        {{ $slug := .slug }}
+        {{ $albumTitle := .title }}
+        {{ $files := index $albumImages $slug }}
+        {{ range $i, $f := $files }}
+        <img src="{{ $f }}" alt="{{ $albumTitle }}" loading="lazy" onclick="openLightboxAt('{{ $slug }}', {{ $i }})">
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+
+  </div>
 </section>
 
-{{ end }}
-
-<!-- =====================================
-     Lightbox
-===================================== -->
-
-<div
-    class="lightbox-overlay"
-    id="lightbox"
-    onclick="closeLightbox()">
-
-    <button
-        class="lightbox-close"
-        onclick="closeLightbox()">
-
-        &times;
-
-    </button>
-
-    <img
-        id="lightbox-img"
-        src=""
-        alt="">
-
+<div class="lightbox-overlay" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+  <button class="lightbox-nav lightbox-prev" onclick="navLightbox(-1)">&#10094;</button>
+  <img id="lightbox-img" src="" alt="">
+  <button class="lightbox-nav lightbox-next" onclick="navLightbox(1)">&#10095;</button>
 </div>
 
-<!-- =====================================
-     Script
-===================================== -->
-
 <script>
+const albumImages = {{ $albumImages | jsonify | safeJS }};
+const albumBack = {}; // slug -> where "Back" should go: 'level1' (Team Moments) or 'level2' (Conferences)
 
-function openLightbox(src) {
+{{ range $categories }}
+albumBack["{{ .slug }}"] = {{ if eq .slug $teamSlug }}"gallery-level-1"{{ else }}"gallery-level-2"{{ end }};
+{{ end }}
 
-    document.getElementById("lightbox-img").src = src;
-    document.getElementById("lightbox").classList.add("open");
+let currentAlbum = null;
+let currentIndex = 0;
 
+function showLevel(id) {
+  document.querySelectorAll('.gallery-level').forEach(function(el) { el.style.display = 'none'; });
+  document.getElementById(id).style.display = 'block';
+}
+
+function showAlbum(slug, fromLevel) {
+  document.querySelectorAll('.gallery-level').forEach(function(el) { el.style.display = 'none'; });
+  document.getElementById('album-' + slug).style.display = 'block';
+}
+
+function backFromAlbum(slug) {
+  showLevel(albumBack[slug]);
+}
+
+function openLightboxAt(slug, index) {
+  currentAlbum = slug;
+  currentIndex = index;
+  updateLightboxImage();
+  document.getElementById('lightbox').classList.add('open');
+}
+
+function updateLightboxImage() {
+  const imgs = albumImages[currentAlbum];
+  document.getElementById('lightbox-img').src = imgs[currentIndex];
+}
+
+function navLightbox(delta) {
+  const imgs = albumImages[currentAlbum];
+  currentIndex = (currentIndex + delta + imgs.length) % imgs.length;
+  updateLightboxImage();
 }
 
 function closeLightbox() {
-
-    document.getElementById("lightbox").classList.remove("open");
-
+  document.getElementById('lightbox').classList.remove('open');
 }
 
-document.addEventListener("keydown", function(event) {
-
-    if (event.key === "Escape") {
-
-        closeLightbox();
-
-    }
-
+document.addEventListener('keydown', function(e) {
+  if (!document.getElementById('lightbox').classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') navLightbox(-1);
+  if (e.key === 'ArrowRight') navLightbox(1);
 });
-
 </script>
 
 {{ end }}

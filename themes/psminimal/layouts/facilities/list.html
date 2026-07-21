@@ -94,19 +94,23 @@
 
                 <div class="facility-image-wrapper"></div>
 
-                <img
-                src="{{ .Params.image }}"
-                alt="{{ .Title }}"
-                class="facility-image"
-                onclick="openLightbox(this.src)">
+                <div class="facility-image-block">
 
-                {{ if .Params.images }}
-                <div class="facility-image-strip">
-                    {{ range .Params.images }}
-                    <img src="{{ . }}" alt="{{ $pageTitle }}" class="facility-image-thumb" onclick="openLightbox(this.src)">
+                    <img
+                    src="{{ .Params.image }}"
+                    alt="{{ .Title }}"
+                    class="facility-image"
+                    onclick="openLightbox(this.src)">
+
+                    {{ if .Params.images }}
+                    <div class="facility-image-strip">
+                        {{ range .Params.images }}
+                        <img src="{{ . }}" alt="{{ $pageTitle }}" class="facility-image-thumb" onclick="openLightbox(this.src)">
+                        {{ end }}
+                    </div>
                     {{ end }}
+
                 </div>
-                {{ end }}
 
                 <div class="facility-content">
 

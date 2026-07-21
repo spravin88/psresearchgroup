@@ -112,7 +112,9 @@ h2 {
   align-items: center;
   justify-content: space-between;
   column-gap: 24px;
+  row-gap: 4px;
   min-height: 80px;
+  flex-wrap: wrap;
   padding-block: 12px;
 }
 
@@ -150,7 +152,8 @@ h2 {
   list-style: none;
   margin: 0;
   padding: 0;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  row-gap: 4px;
 }
 
 .nav-list a {
@@ -1284,6 +1287,29 @@ section.block img[src*="/images/team/"] {
   height: 300px;
   object-fit: cover;
   display: block;
+  cursor: pointer;
+}
+
+.facility-image-block {
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.facility-image-block .facility-image {
+  height: 220px;
+}
+
+.facility-image-strip {
+  display: flex;
+  gap: 4px;
+}
+
+.facility-image-thumb {
+  width: 50%;
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
 }
 
 .facility-content {
@@ -1364,6 +1390,14 @@ section.block img[src*="/images/team/"] {
   .facility-image-wrapper {
     flex: auto;
     height: 240px;
+  }
+  .facility-image-block {
+    flex: auto;
+    width: 100%;
+  }
+  .facility-image-block .facility-image,
+  .facility-image {
+    width: 100%;
   }
 }
 
@@ -2350,21 +2384,8 @@ section.block img[src*="/images/team/"] {
 }
 
 /* ==========================================================
-   21. Facility multi-image support & Our Lab photo grid
+   21. Our Lab photo grid
    ========================================================== */
-
-.facility-image-strip {
-  display: flex;
-  gap: 6px;
-  margin-top: 6px;
-}
-
-.facility-image-thumb {
-  width: 33%;
-  height: 70px;
-  object-fit: cover;
-  border-radius: 6px;
-}
 
 .lab-photo-grid {
   display: grid;

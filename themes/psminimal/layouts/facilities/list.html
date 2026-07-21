@@ -24,6 +24,10 @@
 
     </div>
 
+    <div class="hero-image">
+        <img src="/images/lab/working-1.jpg" alt="Lab working area">
+    </div>
+
 </section>
 
 <!-- =====================================
@@ -51,13 +55,13 @@
         </div>
 
         <div class="lab-photo-grid">
-            <img src="/images/lab/sitting-1.jpg" alt="Sitting area">
-            <img src="/images/lab/sitting-2.jpg" alt="Sitting area">
-            <img src="/images/lab/sitting-3.jpg" alt="Sitting area">
-            <img src="/images/lab/working-1.jpg" alt="Working area">
-            <img src="/images/lab/working-2.jpg" alt="Working area">
-            <img src="/images/lab/working-3.jpg" alt="Working area">
-            <img src="/images/lab/working-4.jpg" alt="Working area">
+            <img src="/images/lab/sitting-1.jpg" alt="Sitting area" onclick="openLightbox(this.src)">
+            <img src="/images/lab/sitting-2.jpg" alt="Sitting area" onclick="openLightbox(this.src)">
+            <img src="/images/lab/sitting-3.jpg" alt="Sitting area" onclick="openLightbox(this.src)">
+            <img src="/images/lab/working-1.jpg" alt="Working area" onclick="openLightbox(this.src)">
+            <img src="/images/lab/working-2.jpg" alt="Working area" onclick="openLightbox(this.src)">
+            <img src="/images/lab/working-3.jpg" alt="Working area" onclick="openLightbox(this.src)">
+            <img src="/images/lab/working-4.jpg" alt="Working area" onclick="openLightbox(this.src)">
         </div>
 
     </div>
@@ -84,6 +88,8 @@
 
             {{ range .Pages }}
 
+            {{ $pageTitle := .Title }}
+
             <article class="facility-card">
 
                 <div class="facility-image-wrapper"></div>
@@ -91,12 +97,13 @@
                 <img
                 src="{{ .Params.image }}"
                 alt="{{ .Title }}"
-                class="facility-image">
+                class="facility-image"
+                onclick="openLightbox(this.src)">
 
                 {{ if .Params.images }}
                 <div class="facility-image-strip">
                     {{ range .Params.images }}
-                    <img src="{{ . }}" alt="{{ $.Title }}" class="facility-image-thumb">
+                    <img src="{{ . }}" alt="{{ $pageTitle }}" class="facility-image-thumb" onclick="openLightbox(this.src)">
                     {{ end }}
                 </div>
                 {{ end }}
@@ -206,5 +213,23 @@
     </div>
 
 </section>
+
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+}
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+});
+</script>
 
 {{ end }}

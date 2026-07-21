@@ -405,9 +405,34 @@
 
         </div>
 
+        <div class="achievement-strip">
+            <img src="/images/research-highlights/08-book-chapter.jpg" alt="Book chapter: Nanocrystalline High Entropy Alloys" onclick="openLightbox(this.src)">
+            <img src="/images/research-highlights/09-pms-review.jpg" alt="Review article in Progress in Materials Science" onclick="openLightbox(this.src)">
+            <img src="/images/research-highlights/10-asn-feature.jpg" alt="Review article featured in Advanced Science News" onclick="openLightbox(this.src)">
+            <img src="/images/research-highlights/11-top2percent-award.jpg" alt="Stanford / Elsevier Top 2% Scientists listing" onclick="openLightbox(this.src)">
+        </div>
+
     </div>
 
 </section>
+
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+}
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+});
+</script>
 
 <!-- ==========================================================
      CURRICULUM VITAE

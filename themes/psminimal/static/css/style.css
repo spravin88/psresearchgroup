@@ -2358,3 +2358,78 @@ section.block img[src*="/images/team/"] {
   object-fit: cover;
   border-radius: 10px;
 }
+
+/* ==========================================================
+   22. Hero image (right column) — previously only the homepage
+   placeholder box was styled; real images in this column had
+   no CSS at all.
+   ========================================================== */
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+/* ==========================================================
+   23. Achievement strip (About page)
+   ========================================================== */
+
+.achievement-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.achievement-strip img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform .2s ease;
+}
+
+.achievement-strip img:hover {
+  transform: scale(1.03);
+}
+
+/* ==========================================================
+   24. Research highlight strip (Research page) — smaller,
+   captioned thumbnails replacing the full-size gallery grid.
+   ========================================================== */
+
+.highlight-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.highlight-strip figure {
+  margin: 0;
+}
+
+.highlight-strip img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform .2s ease;
+}
+
+.highlight-strip img:hover {
+  transform: scale(1.03);
+}
+
+.highlight-strip figcaption {
+  font-size: .8rem;
+  color: var(--text-light);
+  margin-top: .5rem;
+  line-height: 1.4;
+}

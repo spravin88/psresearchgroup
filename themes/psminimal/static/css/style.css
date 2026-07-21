@@ -111,10 +111,8 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  column-gap: 40px;
-  row-gap: 6px;
+  column-gap: 24px;
   min-height: 80px;
-  flex-wrap: wrap;
   padding-block: 12px;
 }
 
@@ -127,7 +125,7 @@ h2 {
 .brand-name {
   display: block;
   font-family: Fraunces,serif;
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   line-height: 1.15;
 }
@@ -148,27 +146,22 @@ h2 {
 .nav-list {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 4px;
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-/* FIX: 10 menu items no longer fit one row above ~1300px content
-   width; wrapping to a second line avoids the page-wide horizontal
-   scrollbar that appeared instead. */
-.nav-list {
-  flex-wrap: wrap;
-  row-gap: 4px;
+  flex-wrap: nowrap;
 }
 
 .nav-list a {
   display: block;
-  padding: 12px 18px;
+  padding: 10px 12px;
   border-radius: 10px;
   font-weight: 600;
+  font-size: .92rem;
   color: #1f2937;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .nav-list a:hover {

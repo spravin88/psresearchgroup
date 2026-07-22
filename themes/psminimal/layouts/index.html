@@ -51,79 +51,15 @@
 
   <div class="card-grid">
 
+    {{ $areas := where .Site.RegularPages "Params.type" "area" }}
+    {{ range $areas.ByParam "weight" }}
     <div class="card">
-      <h3>Additive Manufacturing</h3>
+      <h3>{{ .Title }}</h3>
       <p>
-        Alloy development and processing strategies for laser powder bed fusion
-        and directed energy deposition.
+        {{ .Params.summary }}
       </p>
     </div>
-
-    <div class="card">
-      <h3>Multi-Principal Element Alloys</h3>
-      <p>
-        Computationally guided design of Fe-based complex concentrated alloys
-        with tailored microstructures and properties.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Surface Engineering</h3>
-      <p>
-        Laser cladding, wear-resistant coatings, corrosion protection,
-        and high-temperature applications.
-      </p>
-    </div>
-
-  </div>
-
-</section>
-
-<section class="block">
-
-  <div class="section-label">
-    OUR APPROACH
-  </div>
-
-  <h2>How We Develop Structural Alloys</h2>
-
-  <div class="card-grid">
-
-    <div class="card">
-      <h3>Computational Design</h3>
-      <p>
-        We employ CALPHAD-based thermodynamic calculations, computational
-        alloy design, and ICME concepts to accelerate the development of
-        advanced structural alloys.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Materials Processing</h3>
-      <p>
-        Novel alloys are fabricated using additive manufacturing, laser
-        cladding, casting, and heat-treatment routes to achieve controlled
-        microstructures.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Advanced Characterization</h3>
-      <p>
-        Microstructure evolution is investigated using optical microscopy,
-        SEM, EBSD, XRD, and mechanical testing to establish
-        processing–structure relationships.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Performance Evaluation</h3>
-      <p>
-        Mechanical, tribological, and corrosion performance are evaluated to
-        engineer alloys for demanding industrial and high-temperature
-        applications.
-      </p>
-    </div>
+    {{ end }}
 
   </div>
 
@@ -225,86 +161,9 @@
     through in-house resources and collaborative research facilities.
   </p>
 
-  <div class="infra-grid">
-
-    <article class="infra-card">
-
-      <h3>Computational Design</h3>
-
-      <ul>
-        <li>Thermo-Calc®</li>
-        <li>TC-Python</li>
-        <li>DICTRA</li>
-        <li>Additive Manufacturing Module</li>
-      </ul>
-
-      <p>
-        CALPHAD-based alloy design, diffusion simulations, and process modelling
-        for accelerated materials development.
-      </p>
-
-    </article>
-
-    <article class="infra-card">
-
-      <h3>Materials Processing</h3>
-
-      <ul>
-        <li>Arc Melting</li>
-        <li>Heat Treatment</li>
-        <li>Laser Cladding</li>
-        <li>Additive Manufacturing</li>
-      </ul>
-
-      <p>
-        Alloy synthesis and advanced processing through departmental and
-        collaborative research facilities.
-      </p>
-
-    </article>
-
-    <article class="infra-card">
-
-      <h3>Characterization</h3>
-
-      <ul>
-        <li>Optical Microscopy</li>
-        <li>SEM</li>
-        <li>XRD</li>
-        <li>Digital Image Correlation (DIC)</li>
-      </ul>
-
-      <p>
-        Microstructural characterization and full-field strain measurement for
-        understanding processing–microstructure–property relationships.
-      </p>
-
-    </article>
-
-    <article class="infra-card">
-
-      <h3>Performance Evaluation;</h3>
-
-      <ul>
-        <li>Tensile Testing</li>
-        <li>Hardness</li>
-        <li>Corrosion Evaluation</li>
-      </ul>
-
-      <p>
-        Mechanical and environmental performance evaluation of structural
-        materials for demanding service conditions.
-      </p>
-
-    </article>
-
-  </div>
-
-  <p class="infra-note">
-    Research activities are supported through departmental laboratories,
-    the Central Instrument Facility (CIF) at IIT (BHU), and collaborative
-    access to advanced manufacturing facilities.
-  </p>
+  <a href="{{ "/facilities/" | relURL }}" class="btn btn-secondary">
+    Explore Our Facilities
+  </a>
 
 </section>
 
@@ -318,57 +177,14 @@
 
   <p class="section-intro">
     Our research is strengthened through academic collaborations, industry
-    partnerships, national research initiatives, and competitive research funding.
+    partnerships, national research initiatives, and competitive research
+    funding — including IIT (BHU) Varanasi, Tata Steel, the DRDO
+    Industry–Academia Centre of Excellence, and ANRF (formerly SERB).
   </p>
 
-  <div class="partner-grid">
-
-    <article class="partner-card">
-      <h3>IIT (BHU), Varanasi</h3>
-
-      <span class="partner-tag">Academic Environment</span>
-
-      <p>
-        Departmental laboratories, interdisciplinary collaborations, and shared
-        research infrastructure supporting alloy design, processing,
-        characterization, and mechanical evaluation.
-      </p>
-    </article>
-
-    <article class="partner-card">
-      <h3>Tata Steel</h3>
-
-      <span class="partner-tag">Industry Collaboration</span>
-
-      <p>
-        Collaborative research in laser cladding and advanced manufacturing for
-        the development of high-performance structural materials.
-      </p>
-    </article>
-
-    <article class="partner-card">
-      <h3>DRDO Industry–Academia Centre of Excellence</h3>
-
-      <span class="partner-tag">Research Collaboration</span>
-
-      <p>
-        Collaborative research on advanced materials through the DRDO
-        Industry–Academia Centre of Excellence.
-      </p>
-    </article>
-
-    <article class="partner-card">
-      <h3>ANRF (Formerly SERB)</h3>
-
-      <span class="partner-tag">Competitive Research Funding</span>
-
-      <p>
-        Competitive research funding supporting fundamental and applied research
-        in advanced structural alloys.
-      </p>
-    </article>
-
-  </div>
+  <a href="{{ "/research/#collaborations" | relURL }}" class="btn btn-secondary">
+    See Our Collaborations &amp; Funding
+  </a>
 
 </section>
 

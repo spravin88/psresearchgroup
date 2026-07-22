@@ -2651,3 +2651,57 @@ section.block img[src*="/images/team/"] {
   .lightbox-prev { left: 8px; }
   .lightbox-next { right: 8px; }
 }
+
+/* ==========================================================
+   28. Year-grouped collapsible publication list
+   ========================================================== */
+
+.pub-year-group {
+  margin-bottom: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.pub-year-group summary {
+  cursor: pointer;
+  padding: 16px 22px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--primary);
+  background: #f8fafc;
+  list-style: none;
+}
+
+.pub-year-group summary::-webkit-details-marker {
+  display: none;
+}
+
+.pub-year-group summary::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 10px;
+  transition: transform .2s ease;
+}
+
+.pub-year-group[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.pub-year-count {
+  color: var(--text-light);
+  font-weight: 500;
+  font-size: .9rem;
+}
+
+.pub-year-group .pub-list {
+  padding: 18px;
+}
+
+.pub-year-group .pub-item {
+  margin-bottom: 12px;
+}
+
+.pub-year-group .pub-item:last-child {
+  margin-bottom: 0;
+}

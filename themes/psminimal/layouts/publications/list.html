@@ -35,10 +35,6 @@
 
     <div class="section-header">
 
-        <div class="section-label">
-            HIGHLIGHTS
-        </div>
-
         <h2>
             Research Output at a Glance
         </h2>
@@ -124,10 +120,6 @@
 
     <div class="section-header">
 
-        <div class="section-label">
-            COMPLETE PUBLICATION LIST
-        </div>
-
         <h2>
             Publications
         </h2>
@@ -142,21 +134,38 @@
 
     <div class="pub-group-title">Journal Articles</div>
 
-    <ul class="pub-list">
-        {{ range .Site.Data.publications.journal }}
-        <li class="pub-item">
-            <div class="pub-year">{{ .year }}</div>
-            <div>
-                <p class="pub-title">
-                    {{ if .link }}<a href="{{ .link }}" target="_blank" rel="noopener">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
-                    {{ if .tag }}<span class="pub-tag">{{ .tag }}</span>{{ end }}
-                </p>
-                <p class="pub-authors">{{ .authors | markdownify }}</p>
-                <p class="pub-venue">{{ .venue }}</p>
-            </div>
-        </li>
+    {{ $journal := .Site.Data.publications.journal }}
+    {{ $years := slice }}
+    {{ range $journal }}
+        {{ if not (in $years .year) }}
+            {{ $years = $years | append .year }}
         {{ end }}
-    </ul>
+    {{ end }}
+    {{ $recentYears := first 2 $years }}
+
+    {{ range $years }}
+    {{ $year := . }}
+    {{ $entries := where $journal "year" $year }}
+    {{ $isOpen := in $recentYears $year }}
+    <details class="pub-year-group"{{ if $isOpen }} open{{ end }}>
+        <summary>{{ $year }} <span class="pub-year-count">({{ len $entries }})</span></summary>
+        <ul class="pub-list">
+            {{ range $entries }}
+            <li class="pub-item">
+                <div class="pub-year">{{ .year }}</div>
+                <div>
+                    <p class="pub-title">
+                        {{ if .link }}<a href="{{ .link }}" target="_blank" rel="noopener">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
+                        {{ if .tag }}<span class="pub-tag">{{ .tag }}</span>{{ end }}
+                    </p>
+                    <p class="pub-authors">{{ .authors | markdownify }}</p>
+                    <p class="pub-venue">{{ .venue }}</p>
+                </div>
+            </li>
+            {{ end }}
+        </ul>
+    </details>
+    {{ end }}
 
     <div class="pub-group-title">Book Chapters</div>
 
@@ -203,10 +212,6 @@
     <div class="container">
 
     <div class="section-header">
-
-        <div class="section-label">
-            RESEARCH PROFILES
-        </div>
 
         <h2>
             Explore Our Research

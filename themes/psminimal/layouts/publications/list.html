@@ -31,6 +31,8 @@
 
 <section class="section publication-highlights">
 
+    <div class="container">
+
     <div class="section-header">
 
         <div class="section-label">
@@ -108,6 +110,8 @@
 
     </div>
 
+    </div>
+
 </section>
 
 <!-- =====================================
@@ -115,6 +119,8 @@
 ====================================== -->
 
 <section class="section publication-list">
+
+    <div class="container">
 
     <div class="section-header">
 
@@ -127,16 +133,62 @@
         </h2>
 
         <p>
-            The publication list below is automatically synchronized with our
-            research database. Author names, publication details, and links are
-            updated as new publications become available.
+            Publications are updated as new work is accepted. Full record also
+            available on
+            <a href="{{ .Site.Params.googleScholar }}" target="_blank" rel="noopener">Google Scholar</a>.
         </p>
 
     </div>
 
-    <div class="bibbase-container">
+    <div class="pub-group-title">Journal Articles</div>
 
-        <script src="https://bibbase.org/service/mendeley/19feee0a-83ed-3c3a-96fa-9146fe4d6ab1/group/513214b7-784a-391c-846b-34805da53481?jsonp=1&folding=1&hidemenu=undefined"></script>
+    <ul class="pub-list">
+        {{ range .Site.Data.publications.journal }}
+        <li class="pub-item">
+            <div class="pub-year">{{ .year }}</div>
+            <div>
+                <p class="pub-title">
+                    {{ if .link }}<a href="{{ .link }}" target="_blank" rel="noopener">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
+                    {{ if .tag }}<span class="pub-tag">{{ .tag }}</span>{{ end }}
+                </p>
+                <p class="pub-authors">{{ .authors | markdownify }}</p>
+                <p class="pub-venue">{{ .venue }}</p>
+            </div>
+        </li>
+        {{ end }}
+    </ul>
+
+    <div class="pub-group-title">Book Chapters</div>
+
+    <ul class="pub-list">
+        {{ range .Site.Data.publications.bookChapters }}
+        <li class="pub-item" style="grid-template-columns: 1fr;">
+            <div>
+                <p class="pub-title">
+                    {{ if .link }}<a href="{{ .link }}" target="_blank" rel="noopener">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
+                </p>
+                <p class="pub-authors">{{ .authors | markdownify }}</p>
+                <p class="pub-venue">{{ .venue }}</p>
+            </div>
+        </li>
+        {{ end }}
+    </ul>
+
+    <div class="pub-group-title">Conference Proceedings</div>
+
+    <ul class="pub-list">
+        {{ range .Site.Data.publications.conference }}
+        <li class="pub-item" style="grid-template-columns: 1fr;">
+            <div>
+                <p class="pub-title">
+                    {{ if .link }}<a href="{{ .link }}" target="_blank" rel="noopener">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}
+                </p>
+                <p class="pub-authors">{{ .authors | markdownify }}</p>
+                <p class="pub-venue">{{ .venue }}</p>
+            </div>
+        </li>
+        {{ end }}
+    </ul>
 
     </div>
 
@@ -147,6 +199,8 @@
 ====================================== -->
 
 <section class="section research-profiles">
+
+    <div class="container">
 
     <div class="section-header">
 
@@ -196,6 +250,8 @@
             ResearchGate
         </a>
         {{ end }}
+
+    </div>
 
     </div>
 

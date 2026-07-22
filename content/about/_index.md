@@ -31,7 +31,7 @@ profiles:
 
 stats:
 
-  - value: "51+"
+  - value: "50"
     label: "Journal Publications"
 
   - value: "37"

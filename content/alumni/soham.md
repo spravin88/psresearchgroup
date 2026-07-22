@@ -19,7 +19,7 @@ period: "2023–2026"
 
 sort_year: 2026
 
-linkedin: "..."
+linkedin: "https://in.linkedin.com/in/soham-mukherjee-0443b19b"
 
 weight: 1
 ---

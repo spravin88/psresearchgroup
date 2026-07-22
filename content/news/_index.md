@@ -41,7 +41,9 @@ Complex Alloys* in the workshop on **"Laser Cladding for TSL Applications"**, Ta
 
 - **March** — DRDO DIA-COE proposal approved (₹110 lakh project) on additive manufacturing of high-performance alloys.
 
-- **January** — Sourabh Rai joined the research group for his M.Tech project.
+- **February** — Gulab Chand Gupta discontinued from the research group.
+
+- **January** — Saurabh Rai joined the research group for his M.Tech project.
 
 - **January 15** — Appointed Editorial Committee Member of **Metals and Materials International (Springer)** for the 2024 term.
 

@@ -35,7 +35,7 @@ research:
   - Surface Engineering
 
 stats:
-  publications: 51
+  publications: 50
   hindex: 37
   bookchapters: 2
 

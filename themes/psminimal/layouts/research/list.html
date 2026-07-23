@@ -141,54 +141,27 @@ document.addEventListener('keydown', function(e) {
 
             </div>
 
+            {{ with .Params.projects }}
+
+            <div class="research-projects">
+
+                <strong>Ongoing Projects:</strong>
+
+                <ul>
+
+                    {{ range . }}
+                        <li>{{ . }}</li>
+                    {{ end }}
+
+                </ul>
+
+            </div>
+
+            {{ end }}
+
         </div>
 
         {{ end }}
-
-    </div>
-
-    </div>
-
-</section>
-<section class="section current-projects">
-
-    <div class="container">
-
-    <div class="section-header">
-
-        <h2>
-            Ongoing Research Initiatives
-        </h2>
-
-        <p>
-            Our current research addresses emerging challenges in alloy design,
-            advanced manufacturing, and materials performance through
-            interdisciplinary approaches.
-        </p>
-
-    </div>
-
-    <div class="project-list">
-
-        <div class="project-item">
-            <h3>AI-Assisted Design of Advanced Structural Alloys</h3>
-            <p>Integrating computational thermodynamics and machine learning to accelerate alloy discovery.</p>
-        </div>
-
-        <div class="project-item">
-            <h3>Laser Powder Bed Fusion of Multi-Principal Element Alloys</h3>
-            <p>Understanding process–microstructure–property relationships in additively manufactured alloys.</p>
-        </div>
-
-        <div class="project-item">
-            <h3>Laser Surface Engineering for Enhanced High Temperature Degradation Resistance</h3>
-            <p>Developing advanced coatings and surface modification techniques for demanding environments.</p>
-        </div>
-
-        <div class="project-item">
-            <h3>Microstructure Evolution and Phase Stability</h3>
-            <p>Combining CALPHAD modelling with experimental validation to optimize alloy performance.</p>
-        </div>
 
     </div>
 

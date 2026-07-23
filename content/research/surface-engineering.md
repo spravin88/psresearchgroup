@@ -10,4 +10,7 @@ keywords:
   - Surface Modification
   - Wear
   - Corrosion
+
+projects:
+  - "Laser Surface Engineering for Enhanced High Temperature Degradation Resistance"
 ---

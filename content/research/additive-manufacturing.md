@@ -10,4 +10,7 @@ keywords:
   - Directed Energy Deposition
   - Process Optimization
   - Microstructure
+
+projects:
+  - "Laser Powder Bed Fusion of Multi-Principal Element Alloys"
 ---

@@ -835,10 +835,20 @@ section.block img[src*="/images/team/"] {
 /* NOTE: '.pi-card' redefined (revision 2) — later declarations win */
 .pi-card {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 380px 1fr;
   gap: 50px;
-  align-items: start;
+  align-items: center;
   margin-top: 50px;
+  background: var(--surface, #fff);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.06);
+}
+
+.pi-photo {
+  background: var(--bg, #F8FAFC);
+  border-radius: 20px;
+  padding: 20px;
 }
 
 /* NOTE: '.pi-photo img' redefined (revision 2) — later declarations win */
@@ -848,8 +858,8 @@ section.block img[src*="/images/team/"] {
   object-fit: cover;
   object-position: center 25%;
   display: block;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0,0,0,.08);
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,.1);
 }
 
 /* NOTE: '.pi-content h3' redefined (revision 2) — later declarations win */

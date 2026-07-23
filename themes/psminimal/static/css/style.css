@@ -2389,6 +2389,16 @@ section.block img[src*="/images/team/"] {
   box-shadow: 0 5px 18px rgba(0,0,0,.08);
 }
 
+.info-card-wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 700px) {
+  .info-card-wide {
+    grid-column: span 1;
+  }
+}
+
 .info-card h3 {
   margin-top: 0;
   color: var(--primary);

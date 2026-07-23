@@ -377,7 +377,7 @@
 
             {{ range .Params.awards }}
 
-            <article class="info-card">
+            <article class="info-card{{ if eq .category "Research Fellowships" }} info-card-wide{{ end }}">
 
                 <h3>
 

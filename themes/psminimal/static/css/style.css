@@ -829,20 +829,13 @@ section.block img[src*="/images/team/"] {
   box-shadow: 0 8px 30px rgba(0,0,0,.06);
 }
 
-.pi-photo {
-  overflow: visible;
-  border: 3px dashed red;
-}
-
 .pi-photo img {
-  width: 420px !important;
-  max-width: none !important;
-  aspect-ratio: 1 / 1;
+  width: 100%;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
   object-position: center 25%;
   display: block;
-  margin: 0 auto;
-  border-radius: 50%;
+  border-radius: 16px;
   box-shadow: 0 15px 40px rgba(0,0,0,.1);
 }
 

@@ -1490,8 +1490,8 @@ section.block img[src*="/images/team/"] {
 
 .album-stack {
   position: relative;
-  width: 280px;
-  height: 200px;
+  width: 420px;
+  height: 300px;
 }
 
 .album-layer {
@@ -1515,8 +1515,8 @@ section.block img[src*="/images/team/"] {
 .album-cover {
   position: relative;
   z-index: 3;
-  width: 280px;
-  height: 200px;
+  width: 420px;
+  height: 300px;
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0,0,0,.18);
@@ -1530,12 +1530,14 @@ section.block img[src*="/images/team/"] {
 .album-info {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: .3rem;
 }
 
 .album-badge {
   display: inline-block;
   width: fit-content;
+  margin: 0 auto;
   font-size: .75rem;
   font-weight: 600;
   letter-spacing: .03em;

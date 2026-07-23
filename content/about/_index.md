@@ -146,6 +146,18 @@ service:
 
 awards:
 
+  - category: "Research Fellowships"
+
+    items:
+
+      - "POSTECH Initiative for Fostering Unicorn of Research and Innovation (PIURI), South Korea (Sep 2020 – Aug 2022)"
+
+      - "Korea Research Fellowship (KRF) / Brain Pool (BP) Program, National Research Foundation, South Korea (Apr 2017 – Dec 2021)"
+
+      - "Half-Time Research Assistantship (HTRA), MHRD, India (Jul 2009 – Jul 2016)"
+
+      - "Summer Undergraduate Mentorship in Mechanical Engineering Research (SUMMER), IISc Bangalore, India (May 2008 – Jul 2008)"
+
   - category: "Research Awards"
 
     items:
@@ -169,18 +181,6 @@ awards:
       - "Third Prize – Oral Presentation, National Metallurgist Day and Annual Technical Meeting (2015)"
 
       - "Third Prize – Oral Presentation, National Metallurgist Day and Annual Technical Meeting (2013)"
-
-  - category: "Research Fellowships"
-
-    items:
-
-      - "POSTECH Initiative for Fostering Unicorn of Research and Innovation (PIURI), South Korea (Sep 2020 – Aug 2022)"
-
-      - "Korea Research Fellowship (KRF) / Brain Pool (BP) Program, National Research Foundation, South Korea (Apr 2017 – Dec 2021)"
-
-      - "Half-Time Research Assistantship (HTRA), MHRD, India (Jul 2009 – Jul 2016)"
-
-      - "Summer Undergraduate Mentorship in Mechanical Engineering Research (SUMMER), IISc Bangalore, India (May 2008 – Jul 2008)"
 
   - category: "Travel & Endowment Grants"
 

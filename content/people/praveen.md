@@ -13,7 +13,11 @@ department: "Department of Metallurgical Engineering"
 
 institution: "Indian Institute of Technology (BHU), Varanasi"
 
-tagline: "Structural Alloys • Additive Manufacturing • Tensile Behavior • High Temperature Degradation"
+tagline:
+  - "Structural Alloys"
+  - "Additive Manufacturing"
+  - "ThermoCalc"
+  - "High Temperature Degradation"
 
 education:
   - "M.S. & Ph.D. (Dual Degree), IIT Madras"

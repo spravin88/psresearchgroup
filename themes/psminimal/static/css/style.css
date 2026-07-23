@@ -802,7 +802,7 @@ section.block img[src*="/images/team/"] {
 
 .pi-stat span {
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--primary);
   line-height: 1;
@@ -810,9 +810,9 @@ section.block img[src*="/images/team/"] {
 
 .pi-stat small {
   display: block;
-  margin-top: 10px;
+  margin-top: 8px;
   color: #6b7280;
-  font-size: 0.95rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }

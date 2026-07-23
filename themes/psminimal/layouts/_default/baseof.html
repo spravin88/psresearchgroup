@@ -7,7 +7,7 @@
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   {{ template "_internal/opengraph.html" . }}
   <link rel="canonical" href="{{ .Permalink }}">
-  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}?v={{ now.Unix }}">
   <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
 </head>
 <body>

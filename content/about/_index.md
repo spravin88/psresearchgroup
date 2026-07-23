@@ -170,6 +170,26 @@ awards:
 
       - "Third Prize – Oral Presentation (2013)"
 
+  - category: "Research Fellowships"
+
+    items:
+
+      - "POSTECH Initiative for Fostering Unicorn of Research and Innovation (PIURI), South Korea (Sep 2020 – Aug 2022)"
+
+      - "Korea Research Fellowship (KRF) / Brain Pool (BP) Program, National Research Foundation, South Korea (Apr 2017 – Dec 2021)"
+
+      - "Half-Time Research Assistantship (HTRA), MHRD, India (Jul 2009 – Jul 2016)"
+
+      - "Summer Undergraduate Mentorship in Mechanical Engineering Research (SUMMER), IISc Bangalore, India (May 2008 – Jul 2008)"
+
+  - category: "Travel & Endowment Grants"
+
+    items:
+
+      - "TMS Travel Grant (2014)"
+
+      - "IIM Swarna Jayanti Endowment Fund (2014)"
+
 cv: "/files/CV.pdf"
 
 ---

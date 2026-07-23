@@ -837,13 +837,16 @@ section.block img[src*="/images/team/"] {
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 50px;
-  align-items: center;
+  align-items: start;
   margin-top: 50px;
 }
 
 /* NOTE: '.pi-photo img' redefined (revision 2) — later declarations win */
 .pi-photo img {
   width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center 25%;
   display: block;
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0,0,0,.08);

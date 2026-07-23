@@ -401,6 +401,17 @@ section.block img[src*="/images/team/"] {
   border-radius: 50%;
 }
 
+.pi-photo img[src*="/images/team/"] {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+  border-radius: 16px !important;
+  box-shadow: 0 15px 40px rgba(0,0,0,.1);
+}
+
 /* ==========================================================
    08. Publications
    ========================================================== */

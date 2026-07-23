@@ -9,9 +9,9 @@ type: "member"
 
 image: "/images/team/anish.jpg"
 
-research: "Tentative PhD Title: Hot corrosion of Additively Manufactured Nickel Superalloys"
+research: "Hot corrosion of Additively Manufactured Nickel Superalloys"
 
-supervision: "<a href=\"https://www.iitbhu.ac.in/dept/mec/people/mkarthikmec\" target=\"_blank\">Dr. G M Karthik</a> (Main Supervisor, Mechanical Engineering) &bull; Dr. Praveen Sathiyamoorthi (Co-Supervisor)"
+supervision: "<a href=\"https://www.iitbhu.ac.in/dept/mec/people/mkarthikmec\" target=\"_blank\">Dr. G M Karthik</a> (Main Supervisor, Mechanical Engineering)<br>&bull; Dr. Praveen Sathiyamoorthi (Co-Supervisor)"
 
 education: "M.Tech, NIT Jamshedpur"
 

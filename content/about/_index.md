@@ -156,19 +156,19 @@ awards:
 
     items:
 
-      - "Best Article Award (2018)"
+      - "Best Article Award, Advanced Engineering Materials (2018)"
 
-      - "Topmost Cited Article Award (2018–2019)"
+      - "Topmost Cited Article Award, Advanced Engineering Materials (2018–2019)"
 
   - category: "Presentation Awards"
 
     items:
 
-      - "Best Poster Presentation"
+      - "Best Poster Presentation, National Conference on Advances in Naval Materials (2013)"
 
-      - "Third Prize – Oral Presentation (2015)"
+      - "Third Prize – Oral Presentation, National Metallurgist Day and Annual Technical Meeting (2015)"
 
-      - "Third Prize – Oral Presentation (2013)"
+      - "Third Prize – Oral Presentation, National Metallurgist Day and Annual Technical Meeting (2013)"
 
   - category: "Research Fellowships"
 

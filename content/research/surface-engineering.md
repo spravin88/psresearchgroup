@@ -3,7 +3,7 @@ title: "Surface Engineering"
 type: "area"
 weight: 4
 
-summary: "Enhancing wear and corrosion resistance through advanced coating technologies and laser surface modification."
+summary: "Enhancing high temperature degradation through laser cladding of novel ferrous complex concentrated alloys."
 
 keywords:
   - Laser Cladding

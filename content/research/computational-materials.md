@@ -3,7 +3,7 @@ title: "Computational Materials Engineering"
 type: "area"
 weight: 1
 
-summary: "Accelerating alloy discovery using CALPHAD and machine learning."
+summary: "Designs high-performance structural alloys through CALPHAD-guided composition and phase stability optimization."
 
 keywords:
   - CALPHAD

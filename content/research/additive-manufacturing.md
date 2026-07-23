@@ -3,7 +3,7 @@ title: "Additive Manufacturing"
 type: "area"
 weight: 3
 
-summary: "Understanding process–microstructure–property relationships in laser-based manufacturing."
+summary: "Fabricates designed high-performance structural alloys via laser-based additive manufacturing."
 
 keywords:
   - LPBF

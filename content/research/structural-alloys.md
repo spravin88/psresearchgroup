@@ -1,9 +1,9 @@
 ---
 title: "High-Performance Structural Alloys"
-type: "area"
+type: "goal"
 weight: 2
 
-summary: "Designing advanced ferrous alloys with exceptional strength, ductility, and environmental resistance."
+summary: "The unifying goal of the group's research — designing, fabricating, and surface-engineering advanced ferrous alloys with exceptional strength, ductility, and environmental resistance."
 
 keywords:
   - High-Entropy Alloys

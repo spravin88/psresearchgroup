@@ -831,15 +831,17 @@ section.block img[src*="/images/team/"] {
 
 .pi-photo {
   overflow: visible;
+  border: 3px dashed red;
 }
 
 .pi-photo img {
-  width: 420px;
-  max-width: none;
+  width: 420px !important;
+  max-width: none !important;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center 25%;
   display: block;
+  margin: 0 auto;
   border-radius: 50%;
   box-shadow: 0 15px 40px rgba(0,0,0,.1);
 }

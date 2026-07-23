@@ -402,13 +402,13 @@ section.block img[src*="/images/team/"] {
 }
 
 .pi-photo img[src*="/images/team/"] {
-  width: 100% !important;
-  height: auto !important;
+  width: 100%;
+  height: auto;
   aspect-ratio: 3 / 4;
   object-fit: cover;
   object-position: center 25%;
   display: block;
-  border-radius: 16px !important;
+  border-radius: 16px;
   box-shadow: 0 15px 40px rgba(0,0,0,.1);
 }
 

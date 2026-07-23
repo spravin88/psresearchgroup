@@ -1478,12 +1478,14 @@ section.block img[src*="/images/team/"] {
    ========================================================== */
 
 .album-card {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
-  margin-top: 2rem;
+  margin: 2rem auto 0;
   cursor: pointer;
+  width: fit-content;
+  text-align: center;
 }
 
 .album-stack {

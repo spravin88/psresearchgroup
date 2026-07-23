@@ -217,6 +217,18 @@
 
                 </p>
 
+                {{ with .Params.supervision }}
+
+                <div class="member-supervision">
+
+                    <strong>Supervision:</strong><br>
+
+                    {{ . | safeHTML }}
+
+                </div>
+
+                {{ end }}
+
                 {{ with .Params.education }}
 
                 <div class="member-education">

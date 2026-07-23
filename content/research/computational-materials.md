@@ -12,6 +12,5 @@ keywords:
   - Phase Stability
 
 projects:
-  - "AI-Assisted Design of Advanced Structural Alloys"
-  - "Microstructure Evolution and Phase Stability"
+  - "AI-Assisted Design of Advanced Structural Alloys and Optimization of Heat Treatment Parameters"
 ---

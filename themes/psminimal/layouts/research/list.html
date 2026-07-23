@@ -59,22 +59,22 @@
 
         <div class="highlight-strip">
             <figure>
-                <img src="/images/research-highlights/02-hpt-grain-refinement.jpg" alt="Absence of conventional grain refinement" loading="lazy" onclick="openLightbox(this.src)">
+                <img src="/images/research-highlights/02-hpt-grain-refinement.jpg" alt="Absence of conventional grain refinement" loading="lazy" onclick="openLightbox(0)">
             </figure>
             <figure>
-                <img src="/images/research-highlights/03-heterogeneous-microstructure.jpg" alt="Heterogeneous microstructure and deformation strengthening" loading="lazy" onclick="openLightbox(this.src)">
+                <img src="/images/research-highlights/03-heterogeneous-microstructure.jpg" alt="Heterogeneous microstructure and deformation strengthening" loading="lazy" onclick="openLightbox(1)">
             </figure>
             <figure>
-                <img src="/images/research-highlights/04-superplasticity.jpg" alt="High strain rate superplasticity" loading="lazy" onclick="openLightbox(this.src)">
+                <img src="/images/research-highlights/04-superplasticity.jpg" alt="High strain rate superplasticity" loading="lazy" onclick="openLightbox(2)">
             </figure>
             <figure>
-                <img src="/images/research-highlights/05-hpt-consolidation.jpg" alt="HPT as consolidation technique" loading="lazy" onclick="openLightbox(this.src)">
+                <img src="/images/research-highlights/05-hpt-consolidation.jpg" alt="HPT as consolidation technique" loading="lazy" onclick="openLightbox(3)">
             </figure>
             <figure>
-                <img src="/images/research-highlights/06-cryogenic-tensile.jpg" alt="Enhanced cryogenic tensile properties" loading="lazy" onclick="openLightbox(this.src)">
+                <img src="/images/research-highlights/06-cryogenic-tensile.jpg" alt="Enhanced cryogenic tensile properties" loading="lazy" onclick="openLightbox(4)">
             </figure>
             <figure>
-                <img src="/images/research-highlights/07-thermal-stability.jpg" alt="Thermal stability of MA powders and SPS pellets" loading="lazy" onclick="openLightbox(this.src)">
+                <img src="/images/research-highlights/07-thermal-stability.jpg" alt="Thermal stability of MA powders and SPS pellets" loading="lazy" onclick="openLightbox(5)">
             </figure>
         </div>
 
@@ -82,21 +82,44 @@
 
 </section>
 
-<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-    <img id="lightbox-img" src="" alt="">
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
+    <button class="lightbox-nav lightbox-prev" onclick="navLightbox(event, -1)">&#10094;</button>
+    <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()">
+    <button class="lightbox-nav lightbox-next" onclick="navLightbox(event, 1)">&#10095;</button>
 </div>
 
 <script>
-function openLightbox(src) {
-    document.getElementById('lightbox-img').src = src;
+var lightboxImages = [
+    "/images/research-highlights/02-hpt-grain-refinement.jpg",
+    "/images/research-highlights/03-heterogeneous-microstructure.jpg",
+    "/images/research-highlights/04-superplasticity.jpg",
+    "/images/research-highlights/05-hpt-consolidation.jpg",
+    "/images/research-highlights/06-cryogenic-tensile.jpg",
+    "/images/research-highlights/07-thermal-stability.jpg"
+];
+var lightboxIndex = 0;
+
+function openLightbox(index) {
+    lightboxIndex = index;
+    document.getElementById('lightbox-img').src = lightboxImages[lightboxIndex];
     document.getElementById('lightbox').classList.add('open');
 }
-function closeLightbox() {
+function closeLightbox(e) {
+    if (e) e.stopPropagation();
     document.getElementById('lightbox').classList.remove('open');
 }
+function navLightbox(e, direction) {
+    if (e) e.stopPropagation();
+    lightboxIndex = (lightboxIndex + direction + lightboxImages.length) % lightboxImages.length;
+    document.getElementById('lightbox-img').src = lightboxImages[lightboxIndex];
+}
 document.addEventListener('keydown', function(e) {
+    var lb = document.getElementById('lightbox');
+    if (!lb.classList.contains('open')) return;
     if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') navLightbox(null, -1);
+    if (e.key === 'ArrowRight') navLightbox(null, 1);
 });
 </script>
 
@@ -133,14 +156,6 @@ document.addEventListener('keydown', function(e) {
                 {{ .Params.summary }}
             </p>
 
-            <div class="research-tags">
-
-                {{ range .Params.keywords }}
-                    <span>{{ . }}</span>
-                {{ end }}
-
-            </div>
-
             {{ with .Params.projects }}
 
             <div class="research-projects">
@@ -158,6 +173,14 @@ document.addEventListener('keydown', function(e) {
             </div>
 
             {{ end }}
+
+            <div class="research-tags">
+
+                {{ range .Params.keywords }}
+                    <span>{{ . }}</span>
+                {{ end }}
+
+            </div>
 
         </div>
 

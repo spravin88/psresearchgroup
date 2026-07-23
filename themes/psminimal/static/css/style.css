@@ -789,8 +789,10 @@ section.block img[src*="/images/team/"] {
 
 .pi-stats {
   display: flex;
-  justify-content: center;
   gap: 80px;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #e5e7eb;
   flex-wrap: wrap;
 }
 
@@ -817,9 +819,9 @@ section.block img[src*="/images/team/"] {
 
 .pi-card {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 0.6fr 1fr;
   gap: 50px;
-  align-items: center;
+  align-items: start;
   margin-top: 50px;
   background: var(--surface, #fff);
   border-radius: 24px;
@@ -838,20 +840,8 @@ section.block img[src*="/images/team/"] {
 }
 
 .pi-bio {
-  margin-top: 30px;
-  padding: 40px;
-  background: var(--surface, #fff);
-  border-radius: 24px;
-  box-shadow: 0 8px 30px rgba(0,0,0,.06);
+  margin-top: 25px;
   line-height: 1.7;
-}
-
-.pi-stats-card {
-  margin-top: 30px;
-  padding: 30px 40px;
-  background: var(--surface, #fff);
-  border-radius: 24px;
-  box-shadow: 0 8px 30px rgba(0,0,0,.06);
 }
 
 /* NOTE: '.pi-content h3' redefined (revision 2) — later declarations win */

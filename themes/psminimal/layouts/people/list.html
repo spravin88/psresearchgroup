@@ -123,33 +123,29 @@
 
 </div>
 
-        </div>
+            <p class="pi-bio">
 
-    </div>
+                {{ .Params.bio }}
 
-    <p class="pi-bio">
+            </p>
 
-        {{ .Params.bio }}
+            <div class="pi-stats">
 
-    </p>
+                <div class="pi-stat">
+                    <span>{{ .Params.stats.publications }}+</span>
+                    <small>Publications</small>
+                </div>
 
-    <div class="pi-stats-card">
+                <div class="pi-stat">
+                    <span>{{ .Params.stats.hindex }}</span>
+                    <small>H-index</small>
+                </div>
 
-        <div class="pi-stats">
+                <div class="pi-stat">
+                    <span>{{ .Params.stats.bookchapters }}</span>
+                    <small>Book Chapters</small>
+                </div>
 
-            <div class="pi-stat">
-                <span>{{ .Params.stats.publications }}+</span>
-                <small>Publications</small>
-            </div>
-
-            <div class="pi-stat">
-                <span>{{ .Params.stats.hindex }}</span>
-                <small>H-index</small>
-            </div>
-
-            <div class="pi-stat">
-                <span>{{ .Params.stats.bookchapters }}</span>
-                <small>Book Chapters</small>
             </div>
 
         </div>

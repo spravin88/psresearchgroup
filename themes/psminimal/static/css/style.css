@@ -2543,6 +2543,20 @@ section.block img[src*="/images/team/"] {
   transform: scale(1.03);
 }
 
+.achievement-strip-pair {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.achievement-strip-pair img {
+  height: 280px;
+}
+
+@media (max-width: 600px) {
+  .achievement-strip-pair {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ==========================================================
    24. Research highlight strip (Research page) — smaller,
    captioned thumbnails replacing the full-size gallery grid.

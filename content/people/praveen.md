@@ -16,8 +16,7 @@ institution: "Indian Institute of Technology (BHU), Varanasi"
 tagline: "Structural Alloys • Additive Manufacturing • Tensile Behavior • High Temperature Degradation"
 
 education:
-  - "PhD, IIT Madras"
-  - "MS, IIT Madras"
+  - "M.S. & Ph.D. (Dual Degree), IIT Madras"
   - "BE, Government College of Engineering, Salem"
 
 bio: >

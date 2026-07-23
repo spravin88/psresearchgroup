@@ -49,7 +49,7 @@ quick_facts:
     value: "2022"
 
   - label: "Education"
-    value: "M.S. & Ph.D., IIT Madras"
+    value: "M.S. & Ph.D. (Dual Degree), IIT Madras"
 
   - label: "Previous Institution"
     value: "POSTECH, South Korea"
@@ -194,8 +194,6 @@ cv: "/files/CV.pdf"
 
 ---
 
-Dr. Praveen Sathiyamoorthi is an Assistant Professor in the Department of Metallurgical Engineering at the Indian Institute of Technology (BHU) Varanasi. His research focuses on the design, processing, and mechanical behaviour of compositionally complex alloys, including medium- and high-entropy alloys, for demanding structural applications.
+Dr. Praveen Sathiyamoorthi is an Assistant Professor in the Department of Metallurgical Engineering at the Indian Institute of Technology (BHU) Varanasi. His research integrates computational alloy design, thermodynamic modelling, and advanced processing techniques with detailed microstructural characterization to establish processing–structure–property relationships in compositionally complex alloys, including medium- and high-entropy alloys. Through this multidisciplinary approach, his group aims to accelerate the development of next-generation metallic materials with improved strength, ductility, damage tolerance, and cryogenic performance.
 
-His research integrates computational alloy design, thermodynamic modelling, advanced processing techniques, and detailed microstructural characterization to establish processing–structure–property relationships. Through this multidisciplinary approach, his group aims to accelerate the development of next-generation metallic materials with improved strength, ductility, damage tolerance, and cryogenic performance.
-
-Prior to joining IIT (BHU) in 2022, he served in several research positions at Pohang University of Science and Technology (POSTECH), South Korea, where he worked extensively on advanced structural alloys and deformation mechanisms. He obtained his M.S. and Ph.D. (Dual Degree) in Metallurgical and Materials Engineering from IIT Madras. His work has resulted in numerous high-impact journal publications, invited talks, book chapters, and editorial contributions to leading international journals in materials science.
+Prior to joining IIT (BHU) in 2022, he held successive research positions at Pohang University of Science and Technology (POSTECH), South Korea — as Postdoctoral Research Fellow, Research Assistant Professor, and Research Associate Professor — where he worked extensively on advanced structural alloys and deformation mechanisms. He obtained his M.S. & Ph.D. (Dual Degree) in Metallurgical and Materials Engineering from IIT Madras. His work has resulted in numerous high-impact journal publications, invited talks, book chapters, and editorial contributions to leading international journals in materials science.

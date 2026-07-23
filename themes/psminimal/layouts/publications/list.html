@@ -141,7 +141,7 @@
             {{ $years = $years | append .year }}
         {{ end }}
     {{ end }}
-    {{ $recentYears := first 2 $years }}
+    {{ $recentYears := first 1 $years }}
 
     {{ range $years }}
     {{ $year := . }}

@@ -905,9 +905,9 @@ section.block img[src*="/images/team/"] {
 }
 
 .profile-links {
-  margin-top: 60px;
+  margin-top: 24px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 18px;
 }
@@ -929,9 +929,9 @@ section.block img[src*="/images/team/"] {
 
 /* NOTE: '.profile-links' redefined (revision 2) — later declarations win */
 .profile-links {
-  margin-top: 60px;
+  margin-top: 24px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 18px;
 }

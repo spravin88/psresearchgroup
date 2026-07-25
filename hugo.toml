@@ -12,7 +12,7 @@ enableRobotsTXT = true
   email = "praveen.met@iitbhu.ac.in"
   googleScholar = "https://scholar.google.com/citations?user=v745JdMAAAAJ&hl=en"
   description = "The PS Research Group develops advanced structural materials through computational materials engineering, thermodynamic modelling, additive manufacturing, surface engineering, and experimental characterization."
-  images = ["/images/og-image.png"]
+  images = ["/images/home-hero.jpg"]
   [menu]
 
 [[menu.main]]

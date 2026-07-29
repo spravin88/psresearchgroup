@@ -1,3 +1,8 @@
+# Hugo build output
 public/
 resources/
 .hugo_build.lock
+
+# Local working files — not published to the public repo
+PROJECT_BRIEFING.md
+ps-institute-profile/

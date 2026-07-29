@@ -35,13 +35,12 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Build with Hugo
-        working-directory: ./psrg-website
         run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./psrg-website/public
+          path: ./public
 
   deploy:
     environment:

@@ -11,7 +11,7 @@ image: "/images/team/kamal.jpg"
 
 research: "Additive manufacturing of ferrous-complex concentrated alloys"
 
-education: "PhD (Thesis submitted), NIT Jamshedpur"
+education: "PhD, NIT Jamshedpur"
 
 email: "kamaldv109@gmail.com"
 

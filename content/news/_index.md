@@ -4,6 +4,8 @@ title: "NEWS"
 
 ## 2026
 
+- **September** — Aditya Kumar Seth joined the research group as a doctoral research scholar.
+
 - **July 17** — Delivered an invited talk on *Alloy design for Laser cladding - Compositionally
 Complex Alloys* in the workshop on **"Laser Cladding for TSL Applications"**, Tata Steel, Jamshedpur.
 
